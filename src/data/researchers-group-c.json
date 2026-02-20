@@ -1,0 +1,98 @@
+[
+  {
+    "id": "standing",
+    "fullName": "Guy Standing",
+    "koreanName": "가이 스탠딩",
+    "affiliation": "SOAS University of London",
+    "title": "Professorial Research Associate, Development Studies",
+    "keyWorks": [
+      { "title": "The Precariat: The New Dangerous Class", "year": 2011 },
+      { "title": "A Precariat Charter: From Denizens to Citizens", "year": 2014 },
+      { "title": "Basic Income: And How We Can Make It Happen", "year": 2017 }
+    ],
+    "bio": "영국 노동경제학자로 SOAS 대학교 개발학 교수이자 기본소득지구네트워크(BIEN) 공동설립자. ILO 사회경제안보프로그램 국장을 역임했으며, 세계화로 인한 불안정 노동계급을 지칭하는 '프레카리아트' 개념을 창안했다. 기본소득, 숙의민주주의, 공유재에 관한 연구를 선도하고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Guy_Standing_(economist)",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Guy_Standing_%28sitting%29_in_2012.jpg",
+    "relevance": "프레카리아트/기본소득 이론, 분배 질서 연구"
+  },
+  {
+    "id": "saito",
+    "fullName": "Kohei Saito",
+    "koreanName": "사이토 고헤이",
+    "affiliation": "University of Tokyo",
+    "title": "Associate Professor, Philosophy",
+    "keyWorks": [
+      { "title": "Karl Marx's Ecosocialism: Capital, Nature, and the Unfinished Critique of Political Economy", "year": 2017 },
+      { "title": "Capital in the Anthropocene", "year": 2020 },
+      { "title": "Marx in the Anthropocene: Towards the Idea of Degrowth Communism", "year": 2023 }
+    ],
+    "bio": "일본 철학자로 도쿄대학교 준교수. 마르크스주의 생태학 관점에서 정치경제학을 연구하며, 2018년 도이처 기념상을 역대 최연소이자 최초의 일본인으로 수상했다. 저서 '인신세의 자본론'은 일본에서 50만 부 이상 판매된 베스트셀러이며, 기후변화 대응을 위한 탈성장 공산주의를 제안한다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kohei_Saito",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/MKr364749_Kohei_Saito_%28Frankfurter_Buchmesse_2024%29.jpg",
+    "relevance": "마르크스 생태학, 탈성장, 분배 질서 연구"
+  },
+  {
+    "id": "federici",
+    "fullName": "Silvia Federici",
+    "koreanName": "실비아 페데리치",
+    "affiliation": "Hofstra University",
+    "title": "Professor Emerita, Political Philosophy and International Studies",
+    "keyWorks": [
+      { "title": "Caliban and the Witch: Women, the Body and Primitive Accumulation", "year": 2004 },
+      { "title": "Revolution at Point Zero: Housework, Reproduction, and Feminist Struggle", "year": 2012 },
+      { "title": "Witches, Witch-Hunting, and Women", "year": 2018 }
+    ],
+    "bio": "이탈리아계 미국인 학자이자 마르크스주의 페미니스트 활동가. 1972년 국제페미니스트집단을 공동설립하여 '가사노동 임금' 운동을 주도했다. 자본주의의 기원과 발전에서 여성의 재생산노동, 마녀사냥, 시초축적의 역할을 규명하여 정치경제학의 지평을 근본적으로 전환시켰다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Silvia_Federici",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/La_escritora_y_activista_feminista_Silvia_Federici_%28cropped%29.jpg",
+    "relevance": "돌봄노동/재생산, 분배 질서 연구"
+  },
+  {
+    "id": "acemoglu",
+    "fullName": "Kamer Daron Acemoglu",
+    "koreanName": "대런 아세모글루",
+    "affiliation": "Massachusetts Institute of Technology (MIT)",
+    "title": "Institute Professor of Economics",
+    "keyWorks": [
+      { "title": "Why Nations Fail: The Origins of Power, Prosperity, and Poverty", "year": 2012 },
+      { "title": "The Narrow Corridor: States, Society and the Fate of Liberty", "year": 2019 },
+      { "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity", "year": 2023 }
+    ],
+    "bio": "터키계 미국인 경제학자로 MIT 석좌교수. 포용적 제도와 착취적 제도의 구분을 통해 국가 간 번영 격차를 설명하는 제도경제학 연구를 선도했다. 2024년 사이먼 존슨, 제임스 로빈슨과 함께 '제도가 형성되어 번영에 영향을 미치는 과정'에 대한 연구로 노벨 경제학상을 수상했다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Acemoglu_2016_%283x4_cropped%29.png",
+    "relevance": "기술과 제도, 국제 질서·미중 경쟁 연구 (2024 노벨경제학상)"
+  },
+  {
+    "id": "mazzucato",
+    "fullName": "Mariana Francesca Mazzucato",
+    "koreanName": "마리아나 마추카토",
+    "affiliation": "University College London (UCL)",
+    "title": "Professor in the Economics of Innovation and Public Value; Founding Director, UCL Institute for Innovation and Public Purpose (IIPP)",
+    "keyWorks": [
+      { "title": "The Entrepreneurial State: Debunking Public vs. Private Sector Myths", "year": 2013 },
+      { "title": "The Value of Everything: Making and Taking in the Global Economy", "year": 2018 },
+      { "title": "Mission Economy: A Moonshot Guide to Changing Capitalism", "year": 2021 }
+    ],
+    "bio": "이탈리아계 미국인 경제학자로 UCL 혁신경제학 교수이자 혁신공공목적연구소(IIPP) 설립 소장. 국가의 기업가적 역할과 공공 부문 혁신 투자의 가치를 재조명하여 산업정책 담론을 전환시켰다. 2021년 이탈리아 공화국 공로훈장 대십자장, 2025년 영국 대영제국 CBE 훈장을 수여받았다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mariana_Mazzucato",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Mariana_Mazzucato_2016_%28cropped%29.jpg",
+    "relevance": "공공 AI 인프라, 거버넌스 연구"
+  },
+  {
+    "id": "floridi",
+    "fullName": "Luciano Floridi",
+    "koreanName": "루치아노 플로리디",
+    "affiliation": "Yale University",
+    "title": "John K. Castle Professor in the Practice of Cognitive Science; Founding Director, Yale Digital Ethics Center",
+    "keyWorks": [
+      { "title": "The Philosophy of Information", "year": 2011 },
+      { "title": "The Ethics of Artificial Intelligence: Principles, Challenges, and Opportunities", "year": 2023 },
+      { "title": "The Green and The Blue: Naive Ideas to Improve Politics in the Digital Age", "year": 2023 }
+    ],
+    "bio": "이탈리아-영국 철학자로 예일대학교 디지털윤리센터 설립 소장. 정보철학과 디지털 윤리 분야의 세계적 권위자로, 2020년 Scopus 기준 세계에서 가장 많이 인용된 생존 철학자이다. 옥스퍼드대학교 철학·정보윤리 교수를 역임했으며, AI 윤리와 디지털 거버넌스 연구를 선도하고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Luciano_Floridi",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Luciano_Floridi_a_Milano.jpg",
+    "relevance": "AI 윤리, 디지털 시민권"
+  }
+]

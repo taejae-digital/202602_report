@@ -1,0 +1,114 @@
+[
+  {
+    "id": "nussbaum",
+    "fullName": "Martha Nussbaum",
+    "koreanName": "마사 누스바움",
+    "affiliation": "University of Chicago",
+    "title": "Ernst Freund Distinguished Service Professor of Law and Ethics",
+    "keyWorks": [
+      { "title": "The Fragility of Goodness", "year": 1986 },
+      { "title": "Frontiers of Justice", "year": 2006 },
+      { "title": "Creating Capabilities", "year": 2011 }
+    ],
+    "bio": "미국의 철학자로 시카고대학교 법학대학원과 철학과에 공동 임용되어 있다. 고대 그리스-로마 철학, 정치철학, 페미니즘, 윤리학 분야에서 활발히 연구하며 2016년 교토상, 2018년 베르그루엔상, 2021년 홀베르그상을 수상했다. 역량 접근법(Capabilities Approach)의 핵심 이론가로서 인간 존엄과 사회정의에 관한 철학적 기초를 제공한다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Martha_Nussbaum",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Martha_Nussbaum_2010_%28cropped%29.jpg",
+    "relevance": "역량 접근법, 디지털 시민권, 인간 존엄 연구"
+  },
+  {
+    "id": "karatani",
+    "fullName": "Kojin Karatani",
+    "koreanName": "가라타니 코진",
+    "affiliation": "Kindai University / Columbia University (former)",
+    "title": "Philosopher and Literary Critic",
+    "keyWorks": [
+      { "title": "Transcritique: On Kant and Marx", "year": 2003 },
+      { "title": "The Structure of World History", "year": 2014 },
+      { "title": "Architecture as Metaphor", "year": 1995 }
+    ],
+    "bio": "일본의 철학자이자 문학비평가로, 호세이대학교, 긴키대학교, 컬럼비아대학교에서 교수직을 역임했다. 칸트와 마르크스를 횡단적으로 독해하는 독창적 방법론을 개발하며, 생산양식이 아닌 교환양식을 중심으로 세계사를 재해석하는 이론적 틀을 제시했다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kojin_Karatani",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Kojinkaratani.jpg",
+    "relevance": "세계사 구조 분석, 인간 존엄 연구"
+  },
+  {
+    "id": "han",
+    "fullName": "Byung-Chul Han",
+    "koreanName": "한병철",
+    "affiliation": "Berlin University of the Arts",
+    "title": "Professor of Philosophy and Cultural Studies",
+    "keyWorks": [
+      { "title": "The Burnout Society", "year": 2015 },
+      { "title": "Psychopolitics", "year": 2017 },
+      { "title": "The Transparency Society", "year": 2015 }
+    ],
+    "bio": "한국 출신으로 독일에서 활동하는 철학자이자 문화이론가로, 베를린 예술대학교 교수를 역임했다. 신자유주의가 사회와 개인에 미치는 영향을 비판적으로 분석하며, 30권 이상의 저서를 집필했다. 독일어로 저술하지만 스페인어권에서 가장 큰 반향을 얻고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Byung-Chul_Han",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/2015_Byung-Chul_Han_%28cropped%292.jpg",
+    "relevance": "기술 시대 철학, 인간 존엄 연구"
+  },
+  {
+    "id": "bengio",
+    "fullName": "Yoshua Bengio",
+    "koreanName": "요슈아 벤지오",
+    "affiliation": "Universite de Montreal",
+    "title": "Professor of Computer Science, Scientific Director of Mila",
+    "keyWorks": [
+      { "title": "Deep Learning", "year": 2016 },
+      { "title": "Learning Deep Architectures for AI", "year": 2009 },
+      { "title": "Neural Machine Translation by Jointly Learning to Align and Translate", "year": 2014 }
+    ],
+    "bio": "캐나다의 컴퓨터과학자로 인공신경망과 딥러닝의 선구자이다. 몬트리올대학교 교수이며 퀘벡 AI 연구소 Mila를 설립했다. 2018년 Geoffrey Hinton, Yann LeCun과 함께 튜링상을 수상했으며, 구글 스칼라 인용 100만 회를 돌파한 최초의 AI 연구자이다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Yoshua_Bengio",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/ICLR_2025_-_Yoshua_Bengio_02.jpg",
+    "relevance": "AI 안전, 자율살상 위협 연구"
+  },
+  {
+    "id": "bostrom",
+    "fullName": "Nick Bostrom",
+    "koreanName": "닉 보스트롬",
+    "affiliation": "Macrostrategy Research Initiative",
+    "title": "Principal Researcher (former Director, Future of Humanity Institute, Oxford)",
+    "keyWorks": [
+      { "title": "Superintelligence: Paths, Dangers, Strategies", "year": 2014 },
+      { "title": "Anthropic Bias: Observation Selection Effects in Science and Philosophy", "year": 2002 },
+      { "title": "Deep Utopia: Life and Meaning in a Solved World", "year": 2024 }
+    ],
+    "bio": "스웨덴 출신 철학자로 실존적 위험, 인류적 원리, 초지능 위험 연구로 알려져 있다. 옥스퍼드대학교 미래인류연구소(Future of Humanity Institute) 설립 소장을 역임했으며 현재 Macrostrategy Research Initiative의 수석 연구원이다. AI가 초지능으로 발전할 가능성과 그에 따른 실존적 위험을 체계적으로 분석한다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nick_Bostrom",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Prof_Nick_Bostrom_324-1.jpg",
+    "relevance": "실존적 위험, AI 자율살상 위협 연구"
+  },
+  {
+    "id": "russell",
+    "fullName": "Stuart J. Russell",
+    "koreanName": "스튜어트 러셀",
+    "affiliation": "University of California, Berkeley",
+    "title": "Smith-Zadeh Chair in Engineering, Professor of Computer Science",
+    "keyWorks": [
+      { "title": "Artificial Intelligence: A Modern Approach", "year": 2021 },
+      { "title": "Human Compatible: AI and the Problem of Control", "year": 2019 },
+      { "title": "Do the Right Thing: Studies in Limited Rationality", "year": 1991 }
+    ],
+    "bio": "영국 출신 컴퓨터과학자로 UC Berkeley 교수이며 인간 호환 AI 센터(CHAI)와 국제 안전-윤리 AI 협회(IASEAI)를 설립했다. Peter Norvig와 공저한 'Artificial Intelligence: A Modern Approach'는 135개국 1,500개 이상의 대학에서 사용되는 AI 분야의 대표 교과서이다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stuart_J._Russell",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Stuart_Russell_01.jpg",
+    "relevance": "AI 정렬, 통제 원칙, 안전 연구"
+  },
+  {
+    "id": "crawford",
+    "fullName": "Kate Crawford",
+    "koreanName": "케이트 크로포드",
+    "affiliation": "USC Annenberg / Microsoft Research",
+    "title": "Research Professor at USC Annenberg, Senior Principal Researcher at Microsoft Research",
+    "keyWorks": [
+      { "title": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence", "year": 2021 },
+      { "title": "Anatomy of an AI System", "year": 2018 },
+      { "title": "The AI Now Report", "year": 2019 }
+    ],
+    "bio": "호주 출신의 연구자이자 학자로 AI의 사회적, 정치적 함의를 연구한다. NYU AI Now Institute를 공동 설립했으며, AI 시스템이 중립적이거나 객관적이지 않고 기존 권력과 불평등 구조를 반영하고 강화한다고 주장한다. 파리 에콜 노르말 쉬페리외르에서 AI와 정의 분야 초대 방문교수를 맡고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kate_Crawford",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kate_Crawford_in_2025_05.jpg",
+    "relevance": "AI 권력 분석, 빅테크 통제 연구"
+  }
+]

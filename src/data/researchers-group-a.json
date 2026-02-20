@@ -1,0 +1,177 @@
+[
+  {
+    "id": "zuboff",
+    "fullName": "Shoshana Zuboff",
+    "koreanName": "쇼샤나 주보프",
+    "affiliation": "Harvard Business School",
+    "title": "Professor Emerita",
+    "keyWorks": [
+      {
+        "title": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+        "year": 2019
+      },
+      {
+        "title": "In the Age of the Smart Machine: The Future of Work and Power",
+        "year": 1988
+      },
+      {
+        "title": "The Support Economy: Why Corporations Are Failing Individuals and the Next Episode of Capitalism",
+        "year": 2002
+      }
+    ],
+    "bio": "미국의 사회심리학자이자 철학자로, 하버드 경영대학원 명예교수이다. '감시 자본주의(surveillance capitalism)', '도구주의적 권력(instrumentarian power)', '사회에서의 학습 분업(division of learning in society)' 등 다수의 독창적 개념을 창안했다. 디지털 혁명, 자본주의의 진화, 심리적 개인성의 역사적 등장, 인간 발달의 조건을 핵심 연구 주제로 다루고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Shoshana_Zuboff",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Shoshana_Zuboff_at_Alexander_von_Humboldt_Institut.jpg",
+    "relevance": "감시 자본주의 진단, 빅테크 통제 연구"
+  },
+  {
+    "id": "piketty",
+    "fullName": "Thomas Piketty",
+    "koreanName": "토마 피케티",
+    "affiliation": "Paris School of Economics / London School of Economics",
+    "title": "Professor of Economics, EHESS; Associate Chair, PSE; Centennial Professor, LSE",
+    "keyWorks": [
+      {
+        "title": "Capital in the Twenty-First Century",
+        "year": 2013
+      },
+      {
+        "title": "Capital and Ideology",
+        "year": 2019
+      },
+      {
+        "title": "A Brief History of Equality",
+        "year": 2022
+      }
+    ],
+    "bio": "프랑스의 경제학자로, 파리경제대학(PSE) 부학장이자 사회과학고등연구원(EHESS) 경제학 교수이다. 소득 및 부의 불평등에 관한 연구에 집중하며, 선진국에서 자본수익률이 경제성장률보다 지속적으로 높다는 것을 실증적으로 분석했다. 교육 시스템 개선과 지식의 확산을 불평등 감소의 핵심 메커니즘으로 제안한다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thomas_Piketty",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Thomas_Piketty%2C_2015_%28cropped%29.jpg",
+    "relevance": "불평등 구조 분석, 분배 질서 연구"
+  },
+  {
+    "id": "harari",
+    "fullName": "Yuval Noah Harari",
+    "koreanName": "유발 노아 하라리",
+    "affiliation": "Hebrew University of Jerusalem",
+    "title": "Professor of History",
+    "keyWorks": [
+      {
+        "title": "Sapiens: A Brief History of Humankind",
+        "year": 2011
+      },
+      {
+        "title": "Homo Deus: A Brief History of Tomorrow",
+        "year": 2016
+      },
+      {
+        "title": "Nexus: A Brief History of Information Networks from the Stone Age to AI",
+        "year": 2024
+      }
+    ],
+    "bio": "이스라엘의 중세사학자이자 대중 과학 저술가로, 예루살렘 히브리대학교 역사학 교수이다. 자유의지, 의식, 지능, 행복, 고통, 그리고 인류 진화에서 스토리텔링의 역할을 핵심 주제로 탐구한다. 2019년 남편 이츠하크 야하브와 함께 사피엔십(Sapienship)을 설립하여 글로벌 책임과 기술·미래 세계 질서에 관한 연구를 수행하고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Yuval_Noah_Harari",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/MKr364751_Yuval_Noah_Harari_%28Frankfurter_Buchmesse_2024%29.jpg",
+    "relevance": "인간 존엄의 위기 진단"
+  },
+  {
+    "id": "hinton",
+    "fullName": "Geoffrey Everest Hinton",
+    "koreanName": "제프리 힌턴",
+    "affiliation": "University of Toronto",
+    "title": "University Professor Emeritus; Chief Scientific Advisor, Vector Institute",
+    "keyWorks": [
+      {
+        "title": "Learning representations by back-propagating errors (Nature, with Rumelhart & Williams)",
+        "year": 1986
+      },
+      {
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks (AlexNet, with Krizhevsky & Sutskever)",
+        "year": 2012
+      },
+      {
+        "title": "Deep Learning (Nature, with LeCun & Bengio)",
+        "year": 2015
+      }
+    ],
+    "bio": "영국계 캐나다인 컴퓨터과학자이자 인지과학자로, '인공지능의 대부(Godfather of AI)'로 불린다. 인공 신경망에 관한 선구적 연구로 2018년 튜링상(Yoshua Bengio, Yann LeCun과 공동), 2024년 노벨 물리학상(John Hopfield와 공동)을 수상했다. 2023년 5월 Google을 퇴사하며 AI의 위험성에 대해 자유롭게 발언하기 시작했으며, AI 안전 연구의 긴급성을 강조하고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Geoffrey_Hinton",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Geoffrey_E._Hinton%2C_2024_Nobel_Prize_Laureate_in_Physics_%28cropped1%29.jpg",
+    "relevance": "AI 안전 경고, 자율살상 위협 연구"
+  },
+  {
+    "id": "suleyman",
+    "fullName": "Mustafa Suleyman",
+    "koreanName": "무스타파 술레이만",
+    "affiliation": "Microsoft AI",
+    "title": "CEO of Microsoft AI; Co-founder of DeepMind; Co-founder of Inflection AI",
+    "keyWorks": [
+      {
+        "title": "The Coming Wave: Technology, Power, and the Twenty-first Century's Greatest Dilemma",
+        "year": 2023
+      },
+      {
+        "title": "DeepMind: The Podcast (series on AI research and ethics)",
+        "year": 2019
+      },
+      {
+        "title": "AI and the Containment Problem (essays and public lectures)",
+        "year": 2023
+      }
+    ],
+    "bio": "영국의 AI 기업가로, DeepMind의 공동창업자이자 전 응용 AI 책임자이다. DeepMind 퇴사 후 2022년 Inflection AI를 공동 설립했으며, 현재 Microsoft AI의 CEO를 맡고 있다. 저서 'The Coming Wave'에서 AI와 합성생물학의 융합이 가져올 '통제 문제(containment problem)'를 시대의 핵심 과제로 제시했다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mustafa_Suleyman",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Mustafa_Suleyman_photo_%28cropped%29.jpg",
+    "relevance": "AI 통제 경고, 국제 질서·거버넌스 연구"
+  },
+  {
+    "id": "sandel",
+    "fullName": "Michael Joseph Sandel",
+    "koreanName": "마이클 샌델",
+    "affiliation": "Harvard University",
+    "title": "Anne T. and Robert M. Bass Professor of Government",
+    "keyWorks": [
+      {
+        "title": "Justice: What's the Right Thing to Do?",
+        "year": 2009
+      },
+      {
+        "title": "The Tyranny of Merit: What's Become of the Common Good?",
+        "year": 2020
+      },
+      {
+        "title": "What Money Can't Buy: The Moral Limits of Markets",
+        "year": 2012
+      }
+    ],
+    "bio": "미국의 정치철학자로, 하버드대학교 정부학과 석좌교수이다. 그의 강의 'Justice'는 하버드 최초로 온라인·TV로 무료 공개된 강좌로, 전 세계 수천만 명이 시청했다. 존 롤스의 정의론에 대한 비판적 공동체주의 입장으로 유명하며, 능력주의 비판과 공동선의 회복을 핵심 주제로 연구하고 있다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Michael_Sandel",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Michael_Sandel_Me_Judice.png",
+    "relevance": "공동선·능력주의 비판, 인간 존엄 연구"
+  },
+  {
+    "id": "perez",
+    "fullName": "Carlota Perez",
+    "koreanName": "카를로타 페레즈",
+    "affiliation": "UCL Institute for Innovation and Public Purpose",
+    "title": "Honorary Professor; Scholar of Technology and Socio-Economic Development",
+    "keyWorks": [
+      {
+        "title": "Technological Revolutions and Financial Capital: The Dynamics of Bubbles and Golden Ages",
+        "year": 2002
+      },
+      {
+        "title": "Structural change and assimilation of new technologies in the economic and social systems (Cambridge Journal of Economics)",
+        "year": 1983
+      },
+      {
+        "title": "The Social Shaping of Technological Revolutions (forthcoming sequel)",
+        "year": 2025
+      }
+    ],
+    "bio": "영국-베네수엘라 출신의 기술·사회경제 발전 전문 학자로, 기술경제 패러다임 전환과 거대 발전파동(great surges) 이론의 창시자이다. 슘페터의 콘드라티예프 파동 이론을 발전시켜, 기술혁명과 금융 거품·황금시대의 반복 패턴을 체계화했다. 2012년 은 콘드라티예프 메달, 2021년 위트레흐트대학교 명예박사를 수여받았다.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Carlota_Perez",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Perez_on_16_January_2015.jpg",
+    "relevance": "기술혁명 사이클 이론 (본 연구의 핵심 프레임워크)"
+  }
+]
