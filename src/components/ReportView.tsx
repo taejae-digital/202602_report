@@ -1,9 +1,13 @@
 import { reportSections, reportSummary } from '../data/report-sections'
+import { realWorldExamples } from '../data/realworld-examples'
 import { LinkedText } from './LinkedText'
+import { RealWorldBox } from './RealWorldBox'
 
 interface Props {
   onResearcherClick: (id: string) => void
 }
+
+const exampleMap = new Map(realWorldExamples.map(e => [e.afterSection, e]))
 
 export function ReportView({ onResearcherClick }: Props) {
   return (
@@ -25,29 +29,46 @@ export function ReportView({ onResearcherClick }: Props) {
         ))}
       </div>
 
-      {reportSections.map(section => (
-        <div key={section.id} id={`report-${section.id}`} style={{ marginBottom: 40 }}>
-          <h3 className="section-subtitle">{section.title}</h3>
+      {reportSections.map(section => {
+        const sectionExample = exampleMap.get(section.id)
+        return (
+          <div key={section.id} id={`report-${section.id}`} style={{ marginBottom: 40 }}>
+            <h3 className="section-subtitle">{section.title}</h3>
 
-          {section.subsections.map(sub => (
-            <div key={sub.id} style={{ marginBottom: 24 }}>
-              <h4 style={{
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                color: '#374151',
-                marginBottom: 8,
-              }}>
-                {sub.title}
-              </h4>
-              {sub.paragraphs.map((para, i) => (
-                <p key={i}>
-                  <LinkedText text={para} onResearcherClick={onResearcherClick} />
-                </p>
-              ))}
-            </div>
-          ))}
-        </div>
-      ))}
+            {section.subsections.map(sub => {
+              const subExample = exampleMap.get(sub.id)
+              return (
+                <div key={sub.id} style={{ marginBottom: 24 }}>
+                  <h4 style={{
+                    fontSize: '0.95rem',
+                    fontWeight: 600,
+                    color: '#374151',
+                    marginBottom: 8,
+                  }}>
+                    {sub.title}
+                  </h4>
+                  {sub.paragraphs.map((para, i) => (
+                    <p key={i}>
+                      <LinkedText text={para} onResearcherClick={onResearcherClick} />
+                    </p>
+                  ))}
+                  {subExample && (
+                    <RealWorldBox title={subExample.title}>
+                      {subExample.content}
+                    </RealWorldBox>
+                  )}
+                </div>
+              )
+            })}
+
+            {sectionExample && (
+              <RealWorldBox title={sectionExample.title}>
+                {sectionExample.content}
+              </RealWorldBox>
+            )}
+          </div>
+        )
+      })}
     </div>
   )
 }

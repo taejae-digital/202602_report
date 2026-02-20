@@ -44,83 +44,48 @@ export const frameworkPhases: FrameworkPhase[] = [
   },
 ]
 
-export interface ResearchArea {
+export interface ResearchStage {
   id: string
-  priority: 'critical' | 'important'
-  priorityLabel: string
-  weight: string
+  num: string
   title: string
-  topic: string
+  subtitle: string
+  question: string
   direction: string
+  existing: string
   researchers: string[]
-  lead?: string
+  isAdaptive?: boolean
 }
 
-export const researchAreas: ResearchArea[] = [
+export const researchStages: ResearchStage[] = [
   {
-    id: 'human-dignity',
-    priority: 'critical',
-    priorityLabel: '5% 결정적',
-    weight: '인간 위협',
-    title: '인간 존엄의 위기',
-    topic: '인간 = 삶 그 자체로 가치 있는, 목적을 세우는 존재',
-    direction: '디지털 시대 인간 위협과 권리 이론화',
-    researchers: ['sandel', 'nussbaum', 'karatani', 'han'],
-    lead: '김수연',
+    id: 'subject',
+    num: '❶',
+    title: '주체 정의',
+    subtitle: '전자인이라는 법적 범주',
+    question: 'AI 에이전트가 스스로 판단하고 행동할 때, 그 행위를 누구에게 귀속시킬 것인가?',
+    direction: '전자인을 단일한 지위가 아니라 스펙트럼으로 설계한다 — 도구 → 대리인 → 준자율 → 자율. 각 단계에서 자율성의 범위, 책임의 귀속, 인간 개입의 수준이 달라진다. 러셀의 "번복 가능성" 원칙이 스펙트럼 전체를 관통하는 핵심 제약이 된다.',
+    existing: 'EU 전자인격(2017, 후퇴) · 영미 대리인법 프레임 · AI 정렬(alignment) 접근 — 8년간 합의된 프레임이 없는 상태.',
+    researchers: ['sandel', 'nussbaum', 'karatani', 'han', 'bengio', 'bostrom', 'russell', 'zuboff', 'crawford', 'hinton'],
   },
   {
-    id: 'ai-safety',
-    priority: 'critical',
-    priorityLabel: '5% 결정적',
-    weight: '안전 원칙',
-    title: 'AI 자율살상 위협',
-    topic: 'AI 자율살상·통제상실로부터 보호받을 생명권',
-    direction: 'AI 무기 현황 → 생명권 조항 도출',
-    researchers: ['bengio', 'bostrom', 'russell', 'hinton'],
-    lead: '윤준영',
+    id: 'relation',
+    num: '❷',
+    title: '관계 정의',
+    subtitle: '인간-AI 사이의 권리와 책임',
+    question: '자연인·법인·전자인이라는 세 당사자 사이의 권리·의무·책임을 어떻게 규율할 것인가?',
+    direction: '산업별 파편 논의를 관통하는 일반 책임 구조의 초안을 설계한다. 네 영역: (1) 데이터 소유권, (2) 인간-AI 책임 배분, (3) 알고리즘 권력의 규율, (4) 디지털 시민권.',
+    existing: '자율주행(SAE 6단계) · 군사 AI(LAWS 규제) · 금융(알고리즘 트레이딩) 등 산업별로 파편화. 산업을 관통하는 일반 구조는 없음.',
+    researchers: ['lanier', 'crawford', 'bengio', 'nussbaum', 'floridi', 'russell'],
   },
   {
-    id: 'tech-control',
-    priority: 'critical',
-    priorityLabel: '5% 결정적',
-    weight: '통제 원칙',
-    title: 'AI와 빅테크 통제',
-    topic: 'AI 결정을 이해·번복·따라잡 수 있는 기술 통제권',
-    direction: '알고리즘 불투명성 분석 → 기술 통제권 정립',
-    researchers: ['zuboff', 'crawford', 'russell'],
-    lead: '이규환',
-  },
-  {
-    id: 'distribution',
-    priority: 'important',
-    priorityLabel: '15% 중요',
-    weight: '경제 질서',
-    title: '분배·노동·공동체 붕괴',
-    topic: '목적 기여 기반 분배 (돌봄·양육·데이터 포함)',
-    direction: '4계급·7단계 공동체 분석과 분배 대안 설계',
-    researchers: ['standing', 'piketty', 'saito', 'federici'],
-    lead: '김수연',
-  },
-  {
-    id: 'international',
-    priority: 'important',
-    priorityLabel: '15% 중요',
-    weight: '국제 질서',
-    title: '미중 패권 경쟁',
-    topic: '미중 협력 기반 글로벌 AI 안전 거버넌스',
-    direction: '미중 현황 → 국제 협력 레짐 설계',
-    researchers: ['suleyman', 'acemoglu', 'graylin'],
-    lead: '윤준영',
-  },
-  {
-    id: 'governance',
-    priority: 'important',
-    priorityLabel: '15% 중요',
-    weight: '거버넌스',
-    title: '빅테크 통제',
-    topic: '공공 AI 인프라 + 기술 권력 분립',
-    direction: '규제 한계 → 공공 AI 인프라 모델',
-    researchers: ['suleyman', 'mazzucato', 'yuk-hui'],
-    lead: '이규환',
+    id: 'order',
+    num: '❸',
+    title: '질서 설계',
+    subtitle: '네 경제 주체의 역할 재정의',
+    question: '전자인·가계·기업·정부 — 네 경제 주체의 역할을 어떻게 새로 정의할 것인가?',
+    direction: '분배 4후보(기본소득 · 데이터 배당 · 공공 AI 인프라 · 역량 접근법)를 배타적 대안이 아닌 상호보완적 요소로 결합한다. 시민 참여가 내장된 거버넌스 구조를 설계한다.',
+    existing: 'EU AI Act(하향식) · 미국(자율 규제) · 중국(국가 통제) — 세 흐름 모두 시민의 실질적 참여 구조가 없음. 글로벌 구속력 있는 레짐도 없음.',
+    researchers: ['standing', 'piketty', 'saito', 'federici', 'suleyman', 'acemoglu', 'graylin', 'mazzucato', 'yuk-hui', 'van-parijs', 'sen', 'tang', 'sandel', 'lanier', 'nussbaum'],
+    isAdaptive: true,
   },
 ]
