@@ -369,9 +369,22 @@ def add_paragraph_with_fonts(doc_or_body, text, style_name=None, alignment=None,
     return p
 
 
-# -- Helper: add body text (handles bullets) -----------------------------------
+# -- Helper: add body text (handles bullets and inline labels) -----------------
+_INLINE_LABELS = [
+    "\uc0b0\uc5c5 \uc2dc\ub300.",       # 산업 시대.
+    "AI \uc2dc\ub300.",                   # AI 시대.
+    "\uc5f0\uad6c \ub9ac\ubdf0: \ubd84\ubc30.",  # 연구 리뷰: 분배.
+    "\uc5f0\uad6c \ub9ac\ubdf0: \uac70\ubc84\ub10c\uc2a4.",  # 연구 리뷰: 거버넌스.
+    "\uc5f0\uad6c \ub9ac\ubdf0.",         # 연구 리뷰.
+    "\uc5f0\uad6c \ubc29\ud5a5.",         # 연구 방향.
+    "\ub370\uc774\ud130 \uc18c\uc720\uad8c.",     # 데이터 소유권.
+    "\uc778\uac04-AI \ucc45\uc784 \ubc30\ubd84.",  # 인간-AI 책임 배분.
+    "\uc54c\uace0\ub9ac\uc998 \uad8c\ub825\uc758 \uaddc\uc728.",  # 알고리즘 권력의 규율.
+    "\ub514\uc9c0\ud138 \uc2dc\ubbfc\uad8c.",     # 디지털 시민권.
+]
+
 def add_body_text(text):
-    """Add body text. Lines starting with '* ' become bullet points."""
+    """Add body text. Handles bullets, inline section labels."""
     if text.startswith("* "):
         bullet_text = text[2:]
         p = doc.add_paragraph(style="List Bullet")
@@ -379,13 +392,36 @@ def add_body_text(text):
         p.paragraph_format.space_after = Pt(4)
         run = p.add_run(bullet_text)
         set_run_fonts(run, size=11)
-    else:
-        p = doc.add_paragraph()
-        p.paragraph_format.line_spacing = 1.5
-        p.paragraph_format.space_after = Pt(8)
-        p.paragraph_format.first_line_indent = Cm(0.5)
-        run = p.add_run(text)
-        set_run_fonts(run, size=11)
+        return p
+
+    # Check for inline labels (산업 시대., AI 시대., 연구 리뷰., 연구 방향.)
+    for prefix in _INLINE_LABELS:
+        if text.startswith(prefix):
+            label = prefix.rstrip(".")
+            body = text[len(prefix):].strip()
+            # Label as styled heading
+            p = doc.add_paragraph()
+            p.paragraph_format.space_before = Pt(10)
+            p.paragraph_format.space_after = Pt(4)
+            run = p.add_run(label)
+            set_run_fonts(run, size=11, bold=True, color=RGBColor(0x1E, 0x3A, 0x5F))
+            # Body as separate paragraph
+            if body:
+                p2 = doc.add_paragraph()
+                p2.paragraph_format.line_spacing = 1.5
+                p2.paragraph_format.space_after = Pt(8)
+                p2.paragraph_format.first_line_indent = Cm(0.5)
+                run2 = p2.add_run(body)
+                set_run_fonts(run2, size=11)
+                return p2
+            return p
+
+    p = doc.add_paragraph()
+    p.paragraph_format.line_spacing = 1.5
+    p.paragraph_format.space_after = Pt(8)
+    p.paragraph_format.first_line_indent = Cm(0.5)
+    run = p.add_run(text)
+    set_run_fonts(run, size=11)
     return p
 
 
