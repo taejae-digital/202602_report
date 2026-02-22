@@ -1172,9 +1172,11 @@ p._element.get_or_add_pPr().append(pBdr)
 
 APA_REFERENCES = [
     'Acemoglu, D., & Johnson, S. (2023). *Power and progress: Our thousand-year struggle over technology and prosperity*. PublicAffairs.',
+    'Amodei, D. (2024, October 17). Machines of loving grace. https://darioamodei.com/machines-of-loving-grace',
+    'Amodei, D. (2026, February 3). The adolescence of technology. https://darioamodei.com/essay/the-adolescence-of-technology',
     'Anthropic. (2026, January 22). Claude\u2019s new constitution. https://www.anthropic.com/news/claude-new-constitution',
-    'Bank of Korea. (2025). AI \ud655\uc0b0\uacfc \uccad\ub144\uace0\uc6a9 \uc704\ucd95: \uc5f0\uacf5\ud3b8\ud5a5(seniority-biased) \uae30\uc220\ubcc0\ud654\ub97c \uc911\uc2ec\uc73c\ub85c [BOK Issue Note No. 2025-30]. https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10094258',
     'Aoki, M. (2001). *Toward a comparative institutional analysis*. MIT Press.',
+    'Bank of Korea. (2025). AI \ud655\uc0b0\uacfc \uccad\ub144\uace0\uc6a9 \uc704\ucd95: \uc5f0\uacf5\ud3b8\ud5a5(seniority-biased) \uae30\uc220\ubcc0\ud654\ub97c \uc911\uc2ec\uc73c\ub85c [BOK Issue Note No. 2025-30]. https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10094258',
     'Bayern, S. (2021). *Autonomous organizations*. Cambridge University Press.',
     'Bengio, Y. (2023, May 7). AI scientists: Safe and useful AI? [Blog post]. https://yoshuabengio.org/2023/05/07/ai-scientists-safe-and-useful-ai/',
     'Bengio, Y. (Ed.). (2024). *International scientific report on the safety of advanced AI: Interim report*. UK Department for Science, Innovation and Technology.',
