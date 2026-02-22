@@ -1,9 +1,6 @@
-import { researchers, getPhotoPath } from '../data/researchers'
-import { useState } from 'react'
-
-interface Props {
-  onResearcherClick: (id: string) => void
-}
+import { researchers, getPhotoPath, getResearcherById } from '../data/researchers'
+import { useState, useCallback } from 'react'
+import { ResearcherPopup } from './ResearcherPopup'
 
 const categories = [
   { label: '전체', filter: () => true },
@@ -25,13 +22,16 @@ const categories = [
   },
 ]
 
-export function ResearcherDirectory({ onResearcherClick }: Props) {
+export function ResearcherDirectory() {
   const [activeFilter, setActiveFilter] = useState(0)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
   const filtered = researchers.filter(r => categories[activeFilter].filter(r.id))
+  const selectedResearcher = selectedId ? getResearcherById(selectedId) : null
+  const handleClose = useCallback(() => setSelectedId(null), [])
 
   return (
     <div className="section">
-      <h2 className="section-title">연구자 프로필 ({researchers.length}명)</h2>
+      <h2 className="section-title">관련 연구자 프로필 ({researchers.length}명)</h2>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
         {categories.map((cat, i) => (
@@ -39,16 +39,11 @@ export function ResearcherDirectory({ onResearcherClick }: Props) {
             key={cat.label}
             onClick={() => setActiveFilter(i)}
             style={{
-              padding: '6px 14px',
-              borderRadius: 20,
-              border: '1px solid',
+              padding: '6px 14px', borderRadius: 20, border: '1px solid',
               borderColor: i === activeFilter ? '#1e40af' : '#e7e5e4',
               background: i === activeFilter ? '#1e40af' : 'white',
               color: i === activeFilter ? 'white' : '#57534e',
-              fontSize: 13,
-              cursor: 'pointer',
-              fontFamily: 'inherit',
-              transition: 'all 0.15s',
+              fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s',
             }}
           >
             {cat.label}
@@ -61,7 +56,7 @@ export function ResearcherDirectory({ onResearcherClick }: Props) {
           <div
             key={r.id}
             className="researcher-card-item"
-            onClick={() => onResearcherClick(r.id)}
+            onClick={() => setSelectedId(r.id)}
           >
             {r.photoUrl ? (
               <img className="photo" src={getPhotoPath(r.photoUrl)} alt={r.fullName} loading="lazy" />
@@ -79,6 +74,10 @@ export function ResearcherDirectory({ onResearcherClick }: Props) {
           </div>
         ))}
       </div>
+
+      {selectedResearcher && (
+        <ResearcherPopup researcher={selectedResearcher} onClose={handleClose} />
+      )}
     </div>
   )
 }

@@ -1,9 +1,10 @@
 interface Props {
   title: string
   children: React.ReactNode
+  url?: string
 }
 
-export function RealWorldBox({ title, children }: Props) {
+export function RealWorldBox({ title, children, url }: Props) {
   return (
     <div style={{
       margin: '20px 0',
@@ -22,6 +23,22 @@ export function RealWorldBox({ title, children }: Props) {
         color: '#92400e',
       }}>
         {title}
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              marginLeft: 8,
+              fontSize: 11,
+              fontWeight: 500,
+              color: '#b45309',
+              textDecoration: 'underline',
+            }}
+          >
+            [출처]
+          </a>
+        )}
       </div>
       <div style={{ color: '#451a03' }}>{children}</div>
     </div>

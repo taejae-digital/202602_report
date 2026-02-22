@@ -11,9 +11,15 @@ const sections = [
   { id: 'report-sec-3', label: '3. AI 시대: 왜 다른가', group: '보고서', indent: true },
   { id: 'report-sec-4', label: '4. 세 단계의 경로', group: '보고서', indent: true },
   { id: 'report-sec-5', label: '5. 무엇을 위한 설계인가', group: '보고서', indent: true },
+  { id: 'scenarios', label: '미래 시나리오', group: '시나리오' },
+  { id: 'scenario-2027', label: '2027: AI 에이전트 세상', group: '시나리오', indent: true },
+  { id: 'scenario-2030', label: '2030: 휴머노이드 로봇', group: '시나리오', indent: true },
+  { id: 'agent-era', label: '에이전트 시대의 일상', group: '시나리오' },
   { id: 'strategy', label: '연구 전략', group: '연구' },
   { id: 'declaration', label: '인간 선언 (초안)', group: '연구' },
-  { id: 'researchers', label: '연구자 프로필', group: '디렉토리' },
+  { id: 'researchers', label: '관련 연구자 프로필', group: '디렉토리' },
+  { id: 'youth-crisis', label: '청년 고용 위기와 AI', group: '디렉토리' },
+  { id: 'references', label: 'References (APA)', group: '디렉토리' },
 ]
 
 export function Nav({ isOpen, onClose }: NavProps) {

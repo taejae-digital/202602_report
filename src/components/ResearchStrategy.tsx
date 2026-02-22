@@ -1,11 +1,8 @@
 import { researchStages } from '../data/framework-data'
 import { getResearcherById } from '../data/researchers'
+import { ResearcherTag } from './ResearcherTag'
 
-interface Props {
-  onResearcherClick: (id: string) => void
-}
-
-export function ResearchStrategy({ onResearcherClick }: Props) {
+export function ResearchStrategy() {
   return (
     <div className="section">
       <h2 className="section-title">연구 전략</h2>
@@ -22,18 +19,13 @@ export function ResearchStrategy({ onResearcherClick }: Props) {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginBottom: 32 }}>
         {researchStages.map(stage => (
-          <StageCard key={stage.id} stage={stage} onResearcherClick={onResearcherClick} />
+          <StageCard key={stage.id} stage={stage} />
         ))}
       </div>
 
       <div style={{
-        marginTop: 8,
-        padding: 20,
-        background: '#f5f5f4',
-        borderRadius: 12,
-        fontSize: 14,
-        color: '#78716c',
-        marginBottom: 32,
+        marginTop: 8, padding: 20, background: '#f5f5f4',
+        borderRadius: 12, fontSize: 14, color: '#78716c', marginBottom: 32,
       }}>
         <strong>나머지 80% — 실무 파생</strong>: 세부 입법, 파일럿 사업, 산업별 적용이라는
         방대한 실무가 따른다. 전체 작업량의 80%를 차지하지만, ❶❷❸이 제공하는 틀 위에서
@@ -42,10 +34,8 @@ export function ResearchStrategy({ onResearcherClick }: Props) {
 
       <h3 className="section-subtitle">연구 일정</h3>
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: 12,
-        marginTop: 12,
+        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gap: 12, marginTop: 12,
       }}>
         {[
           { period: '2026 상반기', task: '❶❷❸ 연구 리뷰 · 초안 설계' },
@@ -54,10 +44,7 @@ export function ResearchStrategy({ onResearcherClick }: Props) {
           { period: '11~12월', task: '서울 컨퍼런스 개최' },
         ].map(item => (
           <div key={item.period} style={{
-            padding: 16,
-            background: 'white',
-            borderRadius: 8,
-            border: '1px solid #e7e5e4',
+            padding: 16, background: 'white', borderRadius: 8, border: '1px solid #e7e5e4',
           }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#1e40af', marginBottom: 4 }}>
               {item.period}
@@ -76,54 +63,26 @@ export function ResearchStrategy({ onResearcherClick }: Props) {
   )
 }
 
-function StageCard({
-  stage,
-  onResearcherClick,
-}: {
-  stage: typeof researchStages[0]
-  onResearcherClick: (id: string) => void
-}) {
+function StageCard({ stage }: { stage: typeof researchStages[0] }) {
   return (
     <div style={{
-      padding: 24,
-      borderRadius: 12,
-      border: '1px solid #e7e5e4',
-      background: 'white',
+      padding: 24, borderRadius: 12, border: '1px solid #e7e5e4', background: 'white',
     }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 8 }}>
-        <span style={{
-          fontSize: 20,
-          fontWeight: 700,
-          color: '#1e40af',
-        }}>
-          {stage.num}
-        </span>
-        <h4 style={{ fontSize: '1rem', fontWeight: 700, margin: 0 }}>
-          {stage.title}
-        </h4>
+        <span style={{ fontSize: 20, fontWeight: 700, color: '#1e40af' }}>{stage.num}</span>
+        <h4 style={{ fontSize: '1rem', fontWeight: 700, margin: 0 }}>{stage.title}</h4>
         <span style={{ fontSize: 13, color: '#78716c' }}>— {stage.subtitle}</span>
         {stage.isAdaptive && (
           <span style={{
-            fontSize: 10,
-            padding: '2px 8px',
-            borderRadius: 10,
-            background: '#fef3c7',
-            color: '#92400e',
-            fontWeight: 600,
-          }}>
-            적응적
-          </span>
+            fontSize: 10, padding: '2px 8px', borderRadius: 10,
+            background: '#fef3c7', color: '#92400e', fontWeight: 600,
+          }}>적응적</span>
         )}
       </div>
 
       <div style={{
-        fontSize: 14,
-        color: '#1e3a5f',
-        fontWeight: 500,
-        marginBottom: 12,
-        padding: '8px 12px',
-        background: '#f0f9ff',
-        borderRadius: 8,
+        fontSize: 14, color: '#1e3a5f', fontWeight: 500, marginBottom: 12,
+        padding: '8px 12px', background: '#f0f9ff', borderRadius: 8,
       }}>
         {stage.question}
       </div>
@@ -141,13 +100,7 @@ function StageCard({
         {stage.researchers.map(id => {
           const r = getResearcherById(id)
           return r ? (
-            <button
-              key={id}
-              className="researcher-tag"
-              onClick={() => onResearcherClick(id)}
-            >
-              {r.koreanName}
-            </button>
+            <ResearcherTag key={id} id={id} displayText={r.koreanName} />
           ) : null
         })}
       </div>

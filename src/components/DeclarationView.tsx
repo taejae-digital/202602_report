@@ -1,11 +1,8 @@
 import { declarationArticles, declarationPreamble } from '../data/declaration-data'
 import { getResearcherById } from '../data/researchers'
+import { ResearcherTag } from './ResearcherTag'
 
-interface Props {
-  onResearcherClick: (id: string) => void
-}
-
-export function DeclarationView({ onResearcherClick }: Props) {
+export function DeclarationView() {
   return (
     <div className="section">
       <h2 className="section-title">건강하고 안전한 미래를 위한 인간 선언 (초안)</h2>
@@ -25,20 +22,12 @@ export function DeclarationView({ onResearcherClick }: Props) {
               제{article.num}조. {article.title}
             </span>
             <p className="article-text">{article.text}</p>
-            <p className="article-basis">
-              근거: {article.basis}
-            </p>
+            <p className="article-basis">근거: {article.basis}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 6 }}>
               {article.researchers.map(id => {
                 const r = getResearcherById(id)
                 return r ? (
-                  <button
-                    key={id}
-                    className="researcher-tag"
-                    onClick={() => onResearcherClick(id)}
-                  >
-                    {r.koreanName}
-                  </button>
+                  <ResearcherTag key={id} id={id} displayText={r.koreanName} />
                 ) : null
               })}
             </div>

@@ -1,3 +1,5 @@
+import { DownloadLinks } from './DownloadLinks'
+
 export function Header() {
   return (
     <header className="site-header">
@@ -11,6 +13,7 @@ export function Header() {
       <p className="meta">
         태재미래전략연구원 디지털 전환과 사회변혁팀 &nbsp;|&nbsp; 2026. 2.
       </p>
+      <DownloadLinks />
     </header>
   )
 }

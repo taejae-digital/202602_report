@@ -6,19 +6,15 @@ import { ReportView } from './components/ReportView'
 import { ResearchStrategy } from './components/ResearchStrategy'
 import { DeclarationView } from './components/DeclarationView'
 import { ResearcherDirectory } from './components/ResearcherDirectory'
-import { ResearcherModal } from './components/ResearcherModal'
-import { TtsPlayer } from './components/TtsPlayer'
+import { FutureScenarios } from './components/FutureScenarios'
+import { AgentEraChanges } from './components/AgentEraChanges'
+import { References } from './components/References'
+import { YouthCrisisView } from './components/YouthCrisisView'
 
-export type SectionId = 'framework' | 'report' | 'strategy' | 'declaration' | 'researchers'
+export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'strategy' | 'declaration' | 'researchers' | 'youth-crisis' | 'references'
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [selectedResearcher, setSelectedResearcher] = useState<string | null>(null)
-
-  const handleResearcherClick = useCallback((id: string) => {
-    setSelectedResearcher(id)
-  }, [])
-
   const closeSidebar = useCallback(() => setSidebarOpen(false), [])
 
   return (
@@ -42,36 +38,42 @@ export default function App() {
         <Header />
 
         <section id="framework">
-          <FrameworkView onResearcherClick={handleResearcherClick} />
+          <FrameworkView />
         </section>
 
         <section id="report">
-          <ReportView onResearcherClick={handleResearcherClick} />
+          <ReportView />
+        </section>
+
+        <section id="scenarios">
+          <FutureScenarios />
+        </section>
+
+        <section id="agent-era">
+          <AgentEraChanges />
         </section>
 
         <section id="strategy">
-          <ResearchStrategy onResearcherClick={handleResearcherClick} />
+          <ResearchStrategy />
         </section>
 
         <section id="declaration">
-          <DeclarationView onResearcherClick={handleResearcherClick} />
+          <DeclarationView />
         </section>
 
         <section id="researchers">
-          <ResearcherDirectory onResearcherClick={handleResearcherClick} />
+          <ResearcherDirectory />
         </section>
 
-        <div style={{ height: 80 }} />
+        <section id="youth-crisis">
+          <YouthCrisisView />
+        </section>
+
+        <section id="references">
+          <References />
+        </section>
+
       </main>
-
-      <TtsPlayer />
-
-      {selectedResearcher && (
-        <ResearcherModal
-          researcherId={selectedResearcher}
-          onClose={() => setSelectedResearcher(null)}
-        />
-      )}
     </div>
   )
 }

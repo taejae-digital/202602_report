@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ResearcherInlineLink } from './ResearcherInlineLink'
 
 const NAME_MAP: [RegExp, string][] = [
   [/주보프/g, 'zuboff'],
@@ -18,7 +19,9 @@ const NAME_MAP: [RegExp, string][] = [
   [/스탠딩/g, 'standing'],
   [/사이토/g, 'saito'],
   [/페데리치/g, 'federici'],
+  [/사레위츠/g, 'sarewitz'],
   [/아세모글루/g, 'acemoglu'],
+  [/존슨/g, 'johnson'],
   [/마추카토/g, 'mazzucato'],
   [/플로리디/g, 'floridi'],
   [/유크 후이/g, 'yuk-hui'],
@@ -28,8 +31,24 @@ const NAME_MAP: [RegExp, string][] = [
   [/센\(1999\)/g, 'sen'],
   [/센\(2009\)/g, 'sen'],
   [/센과/g, 'sen'],
-  [/폴라니/g, ''],
-  [/하이에크/g, ''],
+  [/폴라니/g, 'polanyi'],
+  [/하이에크/g, 'hayek'],
+  [/마르크스/g, 'marx'],
+  [/스미스/g, 'smith'],
+  [/프레이저/g, 'fraser'],
+  [/오이켄/g, 'eucken'],
+  [/반버그/g, 'vanberg'],
+  [/호펠드/g, 'hohfeld'],
+  [/아오키/g, 'aoki'],
+  [/솔럼/g, 'solum'],
+  [/아렌트/g, 'arendt'],
+  [/아모데이/g, 'amodei'],
+  [/Chopra/g, 'chopra'],
+  [/White/g, 'white-lf'],
+  [/Kolt/g, 'kolt'],
+  [/Oliver/g, 'oliver'],
+  [/Bayern/g, 'bayern'],
+  [/Vanberg/g, 'vanberg'],
   [/Zuboff/g, 'zuboff'],
   [/Piketty/g, 'piketty'],
   [/Harari/g, 'harari'],
@@ -48,6 +67,8 @@ const NAME_MAP: [RegExp, string][] = [
   [/Mazzucato/g, 'mazzucato'],
   [/Floridi/g, 'floridi'],
   [/Lanier/g, 'lanier'],
+  [/Sarewitz/g, 'sarewitz'],
+  [/Johnson/g, 'johnson'],
 ]
 
 // Build a single combined regex
@@ -63,10 +84,9 @@ function getIdForMatch(match: string): string {
 
 interface Props {
   text: string
-  onResearcherClick: (id: string) => void
 }
 
-export function LinkedText({ text, onResearcherClick }: Props) {
+export function LinkedText({ text }: Props) {
   const parts: ReactNode[] = []
   let lastIndex = 0
   let key = 0
@@ -80,13 +100,11 @@ export function LinkedText({ text, onResearcherClick }: Props) {
     const id = getIdForMatch(matched)
     if (id) {
       parts.push(
-        <button
+        <ResearcherInlineLink
           key={key++}
-          className="researcher-link"
-          onClick={() => onResearcherClick(id)}
-        >
-          {matched}
-        </button>
+          id={id}
+          displayText={matched}
+        />
       )
     } else {
       parts.push(matched)

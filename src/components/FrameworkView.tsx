@@ -1,20 +1,25 @@
 import { frameworkPhases } from '../data/framework-data'
+import { ResearcherInlineLink } from './ResearcherInlineLink'
+import { SummaryTable } from './SummaryTable'
 
-interface Props {
-  onResearcherClick: (id: string) => void
-}
-
-export function FrameworkView({ onResearcherClick }: Props) {
+export function FrameworkView() {
   return (
     <div className="section">
       <h2 className="section-title">페레즈 사이클 프레임워크</h2>
       <p>
         카를로타{' '}
-        <button className="researcher-link" onClick={() => onResearcherClick('perez')}>
-          페레즈
-        </button>
+        <ResearcherInlineLink id="perez" displayText="페레즈" />
         (2002)의 기술혁명 사이클 이론을 산업 시대와 AI 시대에 적용한 비교 프레임워크.
       </p>
+
+      <div style={{ marginBottom: 32, borderRadius: 12, overflow: 'hidden' }}>
+        <img
+          src={`${import.meta.env.BASE_URL}images/perez-cycle-infographic.jpg`}
+          alt="AI 시대 페레즈 사이클 인포그래픽"
+          style={{ width: '100%', display: 'block' }}
+          loading="lazy"
+        />
+      </div>
 
       <div className="framework-grid">
         {frameworkPhases.map(phase => (
@@ -22,16 +27,12 @@ export function FrameworkView({ onResearcherClick }: Props) {
             <span className="phase-label">{phase.phase}</span>
             {phase.status && (
               <span style={{
-                marginLeft: 8,
-                fontSize: 11,
-                color: '#dc2626',
-                fontWeight: 700,
+                marginLeft: 8, fontSize: 11, color: '#dc2626', fontWeight: 700,
               }}>
                 {phase.status}
               </span>
             )}
             <h3>{phase.phaseKr}</h3>
-
             <div className="comparison">
               <div className="comparison-col industrial">
                 <div className="label">산업 시대</div>
@@ -51,11 +52,8 @@ export function FrameworkView({ onResearcherClick }: Props) {
       </div>
 
       <div style={{
-        marginTop: 32,
-        padding: 24,
-        background: '#fffbeb',
-        borderRadius: 12,
-        border: '1px solid #fde68a',
+        marginTop: 32, padding: 24, background: '#fffbeb',
+        borderRadius: 12, border: '1px solid #fde68a',
       }}>
         <h3 style={{ fontSize: '1rem', marginBottom: 8 }}>
           목표: 경로를 유연하게 설계한다
@@ -65,6 +63,8 @@ export function FrameworkView({ onResearcherClick }: Props) {
           보이지 않는 손을 대체하는 것이 아니라, 보이지 않는 손이 작동할 울타리를 미리 치는 것.
         </p>
       </div>
+
+      <SummaryTable />
     </div>
   )
 }
