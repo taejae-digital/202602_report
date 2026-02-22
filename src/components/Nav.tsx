@@ -20,6 +20,7 @@ const sections = [
   { id: 'researchers', label: '관련 연구자 프로필', group: '디렉토리' },
   { id: 'youth-crisis', label: '청년 고용 위기와 AI', group: '디렉토리' },
   { id: 'asl', label: 'AI Safety Levels (ASL)', group: '디렉토리' },
+  { id: 'democratic-ai', label: 'AI 거버넌스의 민주화', group: '디렉토리' },
   { id: 'references', label: 'References (APA)', group: '디렉토리' },
 ]
 

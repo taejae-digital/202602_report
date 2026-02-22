@@ -11,8 +11,9 @@ import { AgentEraChanges } from './components/AgentEraChanges'
 import { References } from './components/References'
 import { YouthCrisisView } from './components/YouthCrisisView'
 import { ASLView } from './components/ASLView'
+import { DemocraticAIView } from './components/DemocraticAIView'
 
-export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'strategy' | 'declaration' | 'researchers' | 'youth-crisis' | 'asl' | 'references'
+export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'strategy' | 'declaration' | 'researchers' | 'youth-crisis' | 'asl' | 'democratic-ai' | 'references'
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -72,6 +73,10 @@ export default function App() {
 
         <section id="asl">
           <ASLView />
+        </section>
+
+        <section id="democratic-ai">
+          <DemocraticAIView />
         </section>
 
         <section id="references">
