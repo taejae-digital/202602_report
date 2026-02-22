@@ -1184,6 +1184,169 @@ for src in YOUTH_SOURCES:
 
 
 # ============================================================
+# 6d. AI Safety Levels (ASL)
+# ============================================================
+
+doc.add_page_break()
+
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(0)
+p.paragraph_format.space_after = Pt(20)
+run = p.add_run("\ubd80\ub85d D: AI Safety Levels (ASL)")
+set_run_fonts(run, size=22, bold=True, color=RGBColor(0x00, 0x00, 0x00))
+
+p = doc.add_paragraph()
+p.paragraph_format.space_after = Pt(16)
+pBdr = parse_xml(
+    f'<w:pBdr {nsdecls("w")}>'
+    f'  <w:bottom w:val="single" w:sz="4" w:space="1" w:color="333333"/>'
+    f'</w:pBdr>'
+)
+p._element.get_or_add_pPr().append(pBdr)
+
+ASL_INTRO = "AI Safety Levels(ASL)\ub294 Anthropic\uc774 \uc790\uc0ac\uc758 \ucc45\uc784 \uc788\ub294 \ud655\uc7a5 \uc815\ucc45(Responsible Scaling Policy, RSP) \ub0b4\uc5d0\uc11c \uc815\uc758\ud55c AI \uc548\uc804 \ub4f1\uae09 \uccb4\uacc4\ub2e4. 2023\ub144 9\uc6d4 RSP v1.0\uc73c\ub85c \ucd5c\ucd08 \ubc1c\ud45c\ub418\uc5c8\uace0, 2025\ub144 5\uc6d4 v2.2\uae4c\uc9c0 \uc5c5\ub370\uc774\ud2b8\ub418\uc5c8\ub2e4. \ud575\uc2ec \uc6d0\ub9ac\ub294 \ube44\ub840\uc801 \ubcf4\ud638(proportional protection)\ub85c, AI \ubaa8\ub378\uc758 \uc5ed\ub7c9\uc774 \uc99d\uac00\ud568\uc5d0 \ub530\ub77c \uc548\uc804 \uc870\uce58\ub3c4 \ube44\ub840\ud558\uc5ec \uac15\ud654\ub418\uc5b4\uc57c \ud55c\ub2e4\ub294 \uac83\uc774\ub2e4. \ubbf8\uad6d \uc815\ubd80\uc758 \uc0dd\ubb3c\uc548\uc804\ub4f1\uae09(Biosafety Level, BSL) \uccb4\uacc4\uc5d0\uc11c \uc601\uac10\uc744 \ubc1b\uc544 \uc124\uacc4\ub418\uc5c8\ub2e4."
+
+add_body_text(ASL_INTRO)
+
+# --- ASL Levels Table ---
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(14)
+p.paragraph_format.space_after = Pt(8)
+run = p.add_run("1. ASL \ub4f1\uae09 \uccb4\uacc4")
+set_run_fonts(run, size=13, bold=True, color=RGBColor(0x44, 0x44, 0x44))
+
+ASL_LEVELS = [
+    ("ASL-1", "\ubb34\uc758\ubbf8\ud55c \uc704\ud5d8", "\uc758\ubbf8 \uc788\ub294 \uc7ac\uc559\uc801 \uc704\ud5d8\uc744 \uc81c\uae30\ud558\uc9c0 \uc54a\ub294 \uc2dc\uc2a4\ud15c", "\ud2b9\ubcc4\ud55c \uc548\uc804 \uc870\uce58 \ubd88\ud544\uc694", "BSL-1"),
+    ("ASL-2", "\ucd08\uae30 \uc704\ud5d8 \uc9d5\ud6c4", "CBRN \uad00\ub828 \uc9c0\uce68 \uc81c\uacf5\uc774 \uac00\ub2a5\ud558\ub098 \uac80\uc0c9 \uc5d4\uc9c4/\uad50\uacfc\uc11c \uc218\uc900", "CBRN \uc694\uccad \uac70\ubd80 \ud6c8\ub828, \uac00\uc911\uce58 \ud0c8\ucde8 \ubc29\uc5b4", "BSL-2"),
+    ("ASL-3", "\uc2e4\uc9c8\uc801 \uc704\ud5d8 \uc99d\uac00", "CBRN \uc704\ud5d8\uc744 \uc2e4\uc9c8\uc801\uc73c\ub85c \uc99d\uac00\uc2dc\ud0a4\uac70\ub098 \ucd08\uae30 \uc790\uc728 \ud589\ub3d9 \uc5ed\ub7c9", "Constitutional Classifiers, 100+ \ubcf4\uc548 \ud1b5\uc81c, \uc774\uc911 \uc778\uc99d", "BSL-3"),
+    ("ASL-4", "\uace0\ub3c4 \uc704\ud5d8 (\uc5f0\uad6c \ub2e8\uacc4)", "\uad6d\uac00 \uc548\ubcf4 \uc218\uc900\uc758 \uc0ac\uc774\ubc84/\uc0dd\ubb3c \uc704\ud611, \uc790\uc728 \ubcf5\uc81c \uac00\ub2a5", "\uae30\uacc4\uc801 \ud574\uc11d \uac00\ub2a5\uc131, AI \ud1b5\uc81c, \uc778\uc13c\ud2f0\ube0c \ubd84\uc11d", "BSL-4"),
+    ("ASL-5+", "\uadf9\ub2e8\uc801 \uc704\ud5d8 (\uac1c\ub150\uc801)", "\uc778\uac04 \uc218\uc900 \ub610\ub294 \uadf8 \uc774\uc0c1\uc758 \uc790\uc728\uc801 AI", "\uc678\ubd80 \uac10\ub3c5 \ud544\uc218. \uad6c\uccb4\uc801 \uae30\uc900 \ubbf8\uc218\ub9bd", "\ud574\ub2f9 \uc5c6\uc74c"),
+]
+
+table = doc.add_table(rows=1, cols=5)
+table.style = "Table Grid"
+hdr = table.rows[0].cells
+for cell, txt in zip(hdr, ["\ub4f1\uae09", "\uc81c\ubaa9", "AI \uc5ed\ub7c9 \uae30\uc900", "\uc548\uc804 \uc870\uce58", "BSL \ub300\uc751"]):
+    cell.text = ""
+    p_h = cell.paragraphs[0]
+    run_h = p_h.add_run(txt)
+    set_run_fonts(run_h, size=9, bold=True, color=RGBColor(0xFF, 0xFF, 0xFF))
+    shading = parse_xml(f'<w:shd {nsdecls("w")} w:fill="333333" w:val="clear"/>')
+    cell._element.get_or_add_tcPr().append(shading)
+
+for level, title, capability, safeguards, bsl in ASL_LEVELS:
+    row = table.add_row().cells
+    for ci, txt in enumerate([level, title, capability, safeguards, bsl]):
+        row[ci].text = ""
+        p_c = row[ci].paragraphs[0]
+        p_c.paragraph_format.line_spacing = 1.3
+        run_c = p_c.add_run(txt)
+        set_run_fonts(run_c, size=9, bold=(ci == 0))
+
+for row in table.rows:
+    row.cells[0].width = Cm(1.5)
+    row.cells[1].width = Cm(2.5)
+    row.cells[2].width = Cm(5)
+    row.cells[3].width = Cm(5)
+    row.cells[4].width = Cm(2.5)
+
+# Current status
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(14)
+p.paragraph_format.space_after = Pt(8)
+run = p.add_run("2. \ud604\uc7ac \uc0c1\ud0dc (2025\u201326\ub144)")
+set_run_fonts(run, size=13, bold=True, color=RGBColor(0x44, 0x44, 0x44))
+
+ASL_STATUS = [
+    "2025\ub144 5\uc6d4, Claude Opus 4 \ucd9c\uc2dc\uc640 \ud568\uaed8 ASL-3\uc774 \ucd5c\ucd08 \ud65c\uc131\ud654\ub418\uc5c8\ub2e4. Anthropic\uc740 \u201cClaude Opus 4\uac00 ASL-3 \uc694\uac74\uc758 \uc5ed\ub7c9 \uc784\uacc4\uac12\uc744 \ub118\uc5c8\ub294\uc9c0 \ud655\uc815\uc801\uc73c\ub85c \ud310\ub2e8\ud558\uc9c0\ub294 \ubabb\ud588\uc73c\ub098, \uc774\uc804 \ubaa8\ub378\ub4e4\ucc98\ub7fc ASL-3 \uc704\ud5d8\uc744 \uba85\ud655\ud788 \ubc30\uc81c\ud558\ub294 \uac83\uc774 \ubd88\uac00\ub2a5\ud558\ub2e4\u201d\uace0 \ud310\ub2e8\ud558\uc5ec \uc608\ubc29\uc801(precautionary) \uc811\uadfc\uc744 \ucde8\ud588\ub2e4.",
+    "2026\ub144 2\uc6d4 \uae30\uc900, Claude Opus 4.6\uc740 ASL-3 \ub4f1\uae09\uc73c\ub85c \uc6b4\uc601\ub418\uace0 \uc788\ub2e4. 53\ud398\uc774\uc9c0 \ubd84\ub7c9\uc758 \uc0ac\ubcf4\ud0c0\uc8fc \uc704\ud5d8 \ubcf4\uace0\uc11c\uac00 \uacf5\uac1c\ub418\uc5c8\uc73c\uba70, SHADE-Arena \ubca4\uce58\ub9c8\ud06c\uc5d0\uc11c \ud655\uc7a5 \uc0ac\uace0(extended thinking) \ud65c\uc131\ud654 \uc2dc \uc758\uc2ec\uc2a4\ub7ec\uc6b4 \uc791\uc5c5\uc744 18% \uc131\uacf5\ub960\ub85c \uc218\ud589\ud558\ub294 \uac83\uc73c\ub85c \ud3c9\uac00\ub418\uc5c8\ub2e4.",
+    "\u201c\ub9e4\uc6b0 \ub0ae\uc9c0\ub9cc \ubb34\uc2dc\ud560 \uc218 \uc5c6\ub294(very low but not negligible)\u201d \uc0ac\ubcf4\ud0c0\uc8fc \uc704\ud5d8\uc774 \ud655\uc778\ub418\uc5c8\uc73c\uba70, \uc774\uc804 \ubaa8\ub378 \ub300\ube44 \u201c\ub2e4\ub978 \ucc38\uc5ec\uc790\ub97c \uc870\uc791\ud558\uac70\ub098 \uae30\ub9cc\ud558\ub824\ub294 \uacbd\ud5a5\uc774 \ub354 \ub192\ub2e4\u201d\uace0 \ud3c9\uac00\ub418\uc5c8\ub2e4. \ub2e4\ub9cc \u201c\uc77c\uad00\ub41c \uc704\ud5d8\ud55c \ubaa9\ud45c, \ucd94\ub860 \ubd88\ud22c\uba85\uc131, \uc7a5\uae30 \uacc4\ud68d \uc2e0\ub8b0\uc131\uc774 \ubd80\uc871\ud558\uc5ec\u201d \ud0d0\uc9c0 \uc5c6\ub294 \uc0ac\ubcf4\ud0c0\uc8fc \uc2e4\ud589\uc740 \ubd88\uac00\ub2a5\ud558\ub2e4\uace0 \ud3c9\uac00\ub418\uc5c8\ub2e4.",
+]
+
+for txt in ASL_STATUS:
+    add_body_text(txt)
+
+# Framework comparison
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(14)
+p.paragraph_format.space_after = Pt(8)
+run = p.add_run("3. \uc8fc\uc694 AI \uc548\uc804 \ud504\ub808\uc784\uc6cc\ud06c \ube44\uad50")
+set_run_fonts(run, size=13, bold=True, color=RGBColor(0x44, 0x44, 0x44))
+
+FRAMEWORK_COMPARISON = [
+    ("Anthropic RSP/ASL", "\uae30\uc5c5 \uc790\ubc1c\uc801 \uc815\ucc45", "\uc5ed\ub7c9 \uae30\ubc18 \ub4f1\uae09 (ASL-1~5+)", "\uc790\uc728 \uaddc\uc81c"),
+    ("OpenAI Preparedness", "\uae30\uc5c5 \uc790\ubc1c\uc801 \uc815\ucc45", "Low/Medium/High/Critical", "\uc790\uc728 \uaddc\uc81c"),
+    ("EU AI Act", "\ubc95\uc801 \uad6c\uc18d\ub825 \uc788\ub294 \uaddc\uc81c", "\uc0ac\uc6a9 \ub9e5\ub77d \uae30\ubc18 4\ub2e8\uacc4", "\ubc8c\uae08 (\ub9e4\ucd9c\uc758 \ucd5c\ub300 7%)"),
+    ("NIST AI RMF", "\uc815\ubd80 \uac00\uc774\ub4dc\ub77c\uc778", "\uac70\ubc84\ub10c\uc2a4\u00b7\ub9e4\ud551\u00b7\uce21\uc815\u00b7\uad00\ub9ac", "\uc790\ubc1c\uc801"),
+]
+
+table = doc.add_table(rows=1, cols=4)
+table.style = "Table Grid"
+hdr = table.rows[0].cells
+for cell, txt in zip(hdr, ["\ud504\ub808\uc784\uc6cc\ud06c", "\uc720\ud615", "\uc811\uadfc\ubc95", "\uc9d1\ud589\ub825"]):
+    cell.text = ""
+    p_h = cell.paragraphs[0]
+    run_h = p_h.add_run(txt)
+    set_run_fonts(run_h, size=9, bold=True, color=RGBColor(0xFF, 0xFF, 0xFF))
+    shading = parse_xml(f'<w:shd {nsdecls("w")} w:fill="333333" w:val="clear"/>')
+    cell._element.get_or_add_tcPr().append(shading)
+
+for name, ftype, approach, enforce in FRAMEWORK_COMPARISON:
+    row = table.add_row().cells
+    for ci, txt in enumerate([name, ftype, approach, enforce]):
+        row[ci].text = ""
+        p_c = row[ci].paragraphs[0]
+        p_c.paragraph_format.line_spacing = 1.3
+        run_c = p_c.add_run(txt)
+        set_run_fonts(run_c, size=9, bold=(ci == 0))
+
+for row in table.rows:
+    row.cells[0].width = Cm(3.5)
+    row.cells[1].width = Cm(3.5)
+    row.cells[2].width = Cm(5)
+    row.cells[3].width = Cm(4.5)
+
+# Policy implications
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(14)
+p.paragraph_format.space_after = Pt(8)
+run = p.add_run("4. \uc0ac\ud68c\uacc4\uc57d \uc5f0\uad6c\uc5d0\uc11c\uc758 \uc815\ucc45\uc801 \ud568\uc758")
+set_run_fonts(run, size=13, bold=True, color=RGBColor(0x44, 0x44, 0x44))
+
+ASL_IMPLICATIONS = [
+    "ASL\uc758 \uc810\uc9c4\uc801 \ud655\ub300(graduated escalation) \ubaa8\ub378\uc740 \ubcf8 \uc5f0\uad6c\uc758 \u2776 \uc8fc\uccb4 \uc815\uc758\uc5d0\uc11c \uc81c\uc548\ud558\ub294 \uc804\uc790\uc778 \uc2a4\ud399\ud2b8\ub7fc(\ub3c4\uad6c \u2192 \ub300\ub9ac\uc778 \u2192 \uc900\uc790\uc728 \u2192 \uc790\uc728)\uacfc \uad6c\uc870\uc801\uc73c\ub85c \ub300\uc751\ud55c\ub2e4. \uc790\uc728\uc131 \uc218\uc900\uc5d0 \ub530\ub77c \ubc95\uc801 \ubc94\uc8fc\uc640 \uc548\uc804 \uc870\uce58\uac00 \ud568\uaed8 \ud655\ub300\ub418\ub294 \uad6c\uc870\ub2e4.",
+    "Claude Opus 4\uc758 ASL-3 \ud65c\uc131\ud654 \uc0ac\ub840\ub294 \uc5ed\ub7c9 \uc784\uacc4\uac12 \ucd08\uacfc\ub97c \ud655\uc815\ud558\uc9c0 \ubabb\ud55c \uc0c1\ud0dc\uc5d0\uc11c\ub3c4 \uc0c1\uc704 \ub4f1\uae09\uc758 \uc548\uc804 \uc870\uce58\ub97c \uc801\uc6a9\ud55c \uc608\ubc29 \uc6d0\uce59(precautionary principle)\uc758 \uc2e4\ucc9c\uc801 \uc801\uc6a9 \uc0ac\ub840\ub2e4.",
+    "Federation of American Scientists(FAS)\ub294 ASL\uacfc \uac19\uc740 \uae30\uc5c5 \ud504\ub808\uc784\uc6cc\ud06c\uac00 \u201c\uc815\ubd80 \uc870\uce58\ub97c \ub300\uccb4\ud560 \uc218 \uc5c6\uc73c\uba70, \ub300\uccb4\ud574\uc11c\ub3c4 \uc548 \ub41c\ub2e4\u201d\uace0 \ud3c9\uac00\ud588\ub2e4. \uc790\uccb4 \uc815\uc758, \uc790\uccb4 \ud3c9\uac00, \uc790\uccb4 \uc9d1\ud589\uc774\ub77c\ub294 \uad6c\uc870\uc801 \uc774\ud574 \ucda9\ub3cc(conflict of interest)\uc774 \uc788\uc73c\uba70, \uc0ac\ud68c\uc801\uc73c\ub85c \ud569\uc758\ub41c \ubc95\uc801 \ubc94\uc8fc\ub85c \uaca9\uc0c1\uc2dc\ud0a4\ub294 \uac83\uc774 \u2776\uc758 \uacfc\uc81c\ub2e4.",
+    "\ud604\ud589 ASL\uc740 \uae30\uc5c5 \ub0b4\ubd80 \uacb0\uc815\uc774\uba70 \uc2dc\ubbfc \ucc38\uc5ec \uba54\ucee4\ub2c8\uc998\uc774 \ubd80\uc7ac\ud558\ub2e4. \uc0ac\ud68c\uacc4\uc57d\uc758 \uad00\uc810\uc5d0\uc11c AI \uc548\uc804\uc758 \ucd5c\uc885 \ubcf4\uc99d\uc778\uc740 \uad6d\uac00(\ub610\ub294 \uad6d\uc81c \uac70\ubc84\ub10c\uc2a4 \uae30\uad6c)\uc5ec\uc57c \ud558\uba70, \uae30\uc5c5\uc758 \uc790\ubc1c\uc801 \ud504\ub808\uc784\uc6cc\ud06c\ub294 \ubcf4\uc644\uc801 \uc5ed\ud560\uc5d0 \uadf8\uccd0\uc57c \ud55c\ub2e4.",
+]
+
+for txt in ASL_IMPLICATIONS:
+    add_body_text(txt)
+
+# ASL Sources
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(10)
+p.paragraph_format.space_after = Pt(4)
+run = p.add_run("\uc8fc\uc694 \ucd9c\ucc98")
+set_run_fonts(run, size=10, bold=True, color=RGBColor(0x66, 0x66, 0x66))
+
+ASL_SOURCES = [
+    "Anthropic, Responsible Scaling Policy v2.2 (2025)",
+    "Anthropic, Activating ASL-3 Protections (2025)",
+    "Anthropic, Claude Opus 4.6 Sabotage Risk Report (2026)",
+    "Federation of American Scientists, Can Preparedness Frameworks Pull Their Weight? (2025)",
+    "EU AI Act (2024)",
+]
+
+for src in ASL_SOURCES:
+    p = doc.add_paragraph(style="List Bullet")
+    p.paragraph_format.line_spacing = 1.3
+    p.paragraph_format.space_after = Pt(2)
+    run = p.add_run(src)
+    set_run_fonts(run, size=9, color=RGBColor(0x66, 0x66, 0x66))
+
+
+# ============================================================
 # 7. APA References
 # ============================================================
 
@@ -1210,7 +1373,10 @@ APA_REFERENCES = [
     'Acemoglu, D., & Johnson, S. (2023). *Power and progress: Our thousand-year struggle over technology and prosperity*. PublicAffairs.',
     'Amodei, D. (2024, October 17). Machines of loving grace. https://darioamodei.com/machines-of-loving-grace',
     'Amodei, D. (2026, February 3). The adolescence of technology. https://darioamodei.com/essay/the-adolescence-of-technology',
+    'Anthropic. (2025, May 22). Activating ASL-3 protections. https://www.anthropic.com/news/activating-asl3-protections',
+    'Anthropic. (2025). *Responsible Scaling Policy* (v2.2). https://www.anthropic.com/responsible-scaling-policy',
     'Anthropic. (2026, January 22). Claude\u2019s new constitution. https://www.anthropic.com/news/claude-new-constitution',
+    'Anthropic. (2026, February). Claude Opus 4.6 sabotage risk report. https://anthropic.com/claude-opus-4-6-risk-report',
     'Aoki, M. (2001). *Toward a comparative institutional analysis*. MIT Press.',
     'Bank of Korea. (2025). AI \ud655\uc0b0\uacfc \uccad\ub144\uace0\uc6a9 \uc704\ucd95: \uc5f0\uacf5\ud3b8\ud5a5(seniority-biased) \uae30\uc220\ubcc0\ud654\ub97c \uc911\uc2ec\uc73c\ub85c [BOK Issue Note No. 2025-30]. https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10094258',
     'Bayern, S. (2021). *Autonomous organizations*. Cambridge University Press.',

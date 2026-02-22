@@ -10,8 +10,9 @@ import { FutureScenarios } from './components/FutureScenarios'
 import { AgentEraChanges } from './components/AgentEraChanges'
 import { References } from './components/References'
 import { YouthCrisisView } from './components/YouthCrisisView'
+import { ASLView } from './components/ASLView'
 
-export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'strategy' | 'declaration' | 'researchers' | 'youth-crisis' | 'references'
+export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'strategy' | 'declaration' | 'researchers' | 'youth-crisis' | 'asl' | 'references'
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -67,6 +68,10 @@ export default function App() {
 
         <section id="youth-crisis">
           <YouthCrisisView />
+        </section>
+
+        <section id="asl">
+          <ASLView />
         </section>
 
         <section id="references">

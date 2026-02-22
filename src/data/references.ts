@@ -117,7 +117,10 @@ export const references: Reference[] = [
 
 export const apaReferences: ApaReference[] = [
   { id: 'acemoglu-2023', citation: 'Acemoglu, D., & Johnson, S. (2023). *Power and progress: Our thousand-year struggle over technology and prosperity*. PublicAffairs.' },
+  { id: 'anthropic-asl3-2025', citation: 'Anthropic. (2025, May 22). Activating ASL-3 protections. https://www.anthropic.com/news/activating-asl3-protections' },
+  { id: 'anthropic-rsp-2025', citation: 'Anthropic. (2025). *Responsible Scaling Policy* (v2.2). https://www.anthropic.com/responsible-scaling-policy' },
   { id: 'anthropic-2026', citation: 'Anthropic. (2026, January 22). Claude\u2019s new constitution. https://www.anthropic.com/news/claude-new-constitution' },
+  { id: 'anthropic-opus46-2026', citation: 'Anthropic. (2026, February). Claude Opus 4.6 sabotage risk report. https://anthropic.com/claude-opus-4-6-risk-report' },
   { id: 'amodei-2024', citation: 'Amodei, D. (2024, October 17). Machines of loving grace. https://darioamodei.com/machines-of-loving-grace' },
   { id: 'amodei-2026', citation: 'Amodei, D. (2026, February 3). The adolescence of technology. https://darioamodei.com/essay/the-adolescence-of-technology' },
   { id: 'aoki-2001', citation: 'Aoki, M. (2001). *Toward a comparative institutional analysis*. MIT Press.' },

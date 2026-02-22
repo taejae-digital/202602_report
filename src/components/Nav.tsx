@@ -19,6 +19,7 @@ const sections = [
   { id: 'declaration', label: '인간 선언 (초안)', group: '연구' },
   { id: 'researchers', label: '관련 연구자 프로필', group: '디렉토리' },
   { id: 'youth-crisis', label: '청년 고용 위기와 AI', group: '디렉토리' },
+  { id: 'asl', label: 'AI Safety Levels (ASL)', group: '디렉토리' },
   { id: 'references', label: 'References (APA)', group: '디렉토리' },
 ]
 
