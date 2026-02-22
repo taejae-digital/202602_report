@@ -155,7 +155,7 @@ body {
 /* Section */
 .section {
   padding: 48px 40px;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
 .section + .section {
