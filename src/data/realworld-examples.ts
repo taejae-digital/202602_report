@@ -60,7 +60,7 @@ export const realWorldExamples: RealWorldExample[] = [
     afterSection: 'sec-4-5',
     title: '블랙프라이데이 AI 트래픽 — 쇼핑의 주체가 바뀌다',
     content:
-      '2025년 블랙프라이데이, 소매 사이트를 방문한 AI 기반 트래픽이 전년 대비 805% 증가했다(Adobe Analytics). Adobe는 HTTP User-Agent 헤더(GPTBot, ChatGPT-User 등 AI 크롤러 고유 식별자), AI 플랫폼 도메인이 찍히는 Referrer 헤더, 그리고 페이지 간 이동 속도가 비정상적으로 빠른 행동 패턴 — 세 가지 신호를 조합해 AI 트래픽을 식별한다. 쇼핑하러 온 것은 사람이 아니라 에이전트였다. 구매 여정의 첫 단추부터 AI가 개입하기 시작하면서, 소비의 주체 자체가 변화하고 있다.',
+      '2025년 블랙프라이데이, 소매 사이트를 방문한 AI 기반 트래픽이 전년 대비 805% 증가했다(Adobe Analytics). 절대 비중은 아직 소규모(Adobe 표현: "the base remains modest")이나, 2024년 9월 이후 두 달마다 두 배씩 성장하고 있다. Adobe는 HTTP User-Agent 헤더(GPTBot, ChatGPT-User 등 AI 크롤러 고유 식별자), AI 플랫폼 도메인이 찍히는 Referrer 헤더, 그리고 페이지 간 이동 속도가 비정상적으로 빠른 행동 패턴 — 세 가지 신호를 조합해 AI 트래픽을 식별한다. AI 경유 방문자의 구매 전환율은 비AI 대비 38% 높았고, Salesforce는 2025 홀리데이 시즌 글로벌 온라인 소매 매출의 20% 이상이 AI의 영향을 받았다고 추산한다. 비중은 작지만 전환율이 높고, 성장 속도가 폭발적이라는 점에서 — 소비의 주체가 바뀌는 전조다.',
     url: 'https://business.adobe.com/resources/digital-economy-index.html',
   },
   {
