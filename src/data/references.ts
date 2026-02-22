@@ -78,13 +78,13 @@ export const references: Reference[] = [
     description: 'B2B 판매자 5명 중 1명이 AI 구매 에이전트의 요청에 대응해야 할 전망',
   },
   {
-    id: 'adobe-digital-economy',
+    id: 'adobe-analytics',
     author: 'Adobe',
     year: 2025,
-    title: 'Digital Economy Index',
+    title: 'Adobe Analytics: Holiday Shopping Report',
     type: 'report',
     url: 'https://business.adobe.com/resources/digital-economy-index.html',
-    description: '2025년 블랙프라이데이 소매 사이트 AI 트래픽 전년 대비 1,200% 증가',
+    description: '2025년 블랙프라이데이 소매 사이트 AI 트래픽 전년 대비 805% 증가',
   },
   {
     id: 'checkout-agentic-commerce',

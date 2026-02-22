@@ -60,7 +60,7 @@ export const realWorldExamples: RealWorldExample[] = [
     afterSection: 'sec-4-5',
     title: '블랙프라이데이 AI 트래픽 — 쇼핑의 주체가 바뀌다',
     content:
-      '2025년 블랙프라이데이, 소매 사이트를 방문한 AI 기반 트래픽이 전년 대비 1,200% 증가했다(Adobe Digital Economy Index). 쇼핑하러 온 것은 사람이 아니라 에이전트였다. 구매 여정의 첫 단추부터 AI가 개입하기 시작하면서, 소비의 주체 자체가 변화하고 있다.',
+      '2025년 블랙프라이데이, 소매 사이트를 방문한 AI 기반 트래픽이 전년 대비 805% 증가했다(Adobe Analytics). 쇼핑하러 온 것은 사람이 아니라 에이전트였다. 구매 여정의 첫 단추부터 AI가 개입하기 시작하면서, 소비의 주체 자체가 변화하고 있다.',
     url: 'https://business.adobe.com/resources/digital-economy-index.html',
   },
   {
