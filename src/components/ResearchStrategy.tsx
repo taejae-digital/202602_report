@@ -27,8 +27,8 @@ export function ResearchStrategy() {
         marginTop: 8, padding: 20, background: '#f5f5f4',
         borderRadius: 12, fontSize: 14, color: '#78716c', marginBottom: 32,
       }}>
-        <strong>나머지 80% — 실무 파생</strong>: 세부 입법, 파일럿 사업, 산업별 적용이라는
-        방대한 실무가 따른다. 전체 작업량의 80%를 차지하지만, ❶❷❸이 제공하는 틀 위에서
+        <strong>파생적 변화 — 실무</strong>: 세부 입법, 파일럿 사업, 산업별 적용이라는
+        방대한 실무가 따른다. 작업량은 가장 크지만, ❶❷❸이 제공하는 틀 위에서
         파생되는 작업이다.
       </div>
 
