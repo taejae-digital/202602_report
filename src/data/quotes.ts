@@ -42,7 +42,7 @@ export const quotes: Quote[] = [
   },
   {
     id: 'bengio-control',
-    text: 'AI는 통제를 벗어날 가능성이 있는 최초의 범용 기술이다.',
+    text: '충분한 안전장치 없이는 AI가 인간의 통제를 벗어날 위험이 있다.',
     author: '요슈아 벤지오',
     authorEn: 'Yoshua Bengio',
     source: 'AI Scientists: Safe and Useful AI?',

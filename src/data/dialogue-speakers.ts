@@ -67,7 +67,7 @@ const SECTION_DIALOGUES: SectionDialogue[] = [
     speakers: [
       {
         photoFile: 'bengio.jpg', nameKr: '요슈아 벤지오', nameEn: 'Yoshua Bengio',
-        lines: ['AI는 통제를 벗어날 가능성이 있는', '최초의 범용 기술이다.'],
+        lines: ['충분한 안전장치 없이는', 'AI가 인간의 통제를 벗어날 위험이 있다.'],
       },
       {
         photoFile: 'hinton.jpg', nameKr: '제프리 힌튼', nameEn: 'Geoffrey Hinton',
