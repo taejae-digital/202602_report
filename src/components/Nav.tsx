@@ -1,6 +1,9 @@
+import type { AppView } from '../App'
+
 interface NavProps {
   isOpen: boolean
   onClose: () => void
+  currentView: AppView
 }
 
 const sections = [
@@ -24,7 +27,7 @@ const sections = [
   { id: 'references', label: 'References (APA)', group: '디렉토리' },
 ]
 
-export function Nav({ isOpen, onClose }: NavProps) {
+export function Nav({ isOpen, onClose, currentView }: NavProps) {
   const handleClick = (id: string) => {
     const el = document.getElementById(id)
     if (el) {
@@ -42,7 +45,25 @@ export function Nav({ isOpen, onClose }: NavProps) {
         <p>태재미래전략연구원 | 2026</p>
       </div>
 
-      {sections.map(s => {
+      <div className="nav-section">
+        <div className="nav-section-title">시너지 북</div>
+      </div>
+      <a
+        className="nav-item"
+        href={currentView === 'the_synergy_book' ? '#' : '#the_synergy_book'}
+        onClick={onClose}
+        style={{
+          display: 'block',
+          textDecoration: 'none',
+          color: 'inherit',
+          fontWeight: currentView === 'the_synergy_book' ? 700 : undefined,
+          background: currentView === 'the_synergy_book' ? 'rgba(99,102,241,0.12)' : undefined,
+        }}
+      >
+        {currentView === 'the_synergy_book' ? '\u{1F4D6} \uBCF4\uACE0\uC11C \uBCF4\uAE30' : '\u{1F4D6} \uC2DC\uB108\uC9C0 \uBD81'}
+      </a>
+
+      {currentView === 'report' && sections.map(s => {
         const showGroup = s.group !== lastGroup
         lastGroup = s.group
         return (
