@@ -76,7 +76,7 @@ export const researchers: Researcher[] = [
     bio: '독일 출신 정치이론가(1906~1975). 《인간의 조건》(1958)에서 인간 활동을 노동(labor)·작업(work)·행위(action)로 구분하고, 인간의 존엄은 생산성이 아니라 "새로움을 시작할 수 있는 능력(natality)"에 있다고 논증했다. 《전체주의의 기원》(1951)에서 대중의 고립과 무의미가 전체주의의 토양이 됨을 분석하여, 인간의 정치적 참여와 공적 영역의 중요성을 역설했다.',
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Hannah_Arendt',
     photoUrl: 'arendt.jpg',
-    relevance: '본 연구 제5장 "무엇을 위한 설계인가"의 핵심 참조. AI가 노동을 대체할 때 인간의 가치를 생산성이 아닌 "새로움을 시작할 수 있는 능력"으로 재정의하자는 제안의 철학적 기초. 노동 중심에서 생명 중심으로의 가치 패러다임 전환을 뒷받침.',
+    relevance: '본 연구 제5장 "무엇을 위한 설계인가"의 핵심 참조. AI가 노동을 대체할 때 인간의 가치를 생산성이 아닌 "새로움을 시작할 수 있는 능력"으로 재정의하자는 제안의 철학적 기초. 노동 중심에서 인간 중심으로의 가치 패러다임 전환을 뒷받침.',
     color: '#7f1d1d',
   },
   {
@@ -270,7 +270,7 @@ export const researchers: Researcher[] = [
     bio: '히브리대학교 역사학 교수. 《사피엔스》(2011)에서 인류 문명 7만 년의 역사를 "허구를 믿는 능력"으로 해석하여 전 세계 3,500만 부 이상 판매된 세계적 지식인이다. 《호모 데우스》(2017)에서는 AI와 생명공학이 대다수 인간을 경제적으로 "쓸모없는 계급(useless class)"으로 만들 수 있다고 경고했다. 최신작 《넥서스》(2024)에서는 정보 네트워크의 역사를 추적하며, AI가 인류 역사상 최초로 "스스로 결정을 내리는 정보 시스템"이 되는 전환의 의미를 분석한다.',
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Yuval_Noah_Harari',
     photoUrl: 'harari.jpg',
-    relevance: '본 연구 제5장 "무엇을 위한 설계인가"의 핵심 문제의식을 제공. 노동 중심 사회계약에서 AI가 노동을 대체하면 인간의 존엄이 위협받는다는 경고는, "노동 중심"에서 "생명 중심"으로 가치 패러다임을 전환해야 한다는 본 연구의 근거다.',
+    relevance: '본 연구 제5장 "무엇을 위한 설계인가"의 핵심 문제의식을 제공. 노동 중심 사회계약에서 AI가 노동을 대체하면 인간의 존엄이 위협받는다는 경고는, "노동 중심"에서 "인간 중심"으로 가치 패러다임을 전환해야 한다는 본 연구의 근거다.',
     color: '#be185d',
   },
   {
@@ -354,6 +354,23 @@ export const researchers: Researcher[] = [
     photoUrl: 'johnson.jpg',
     relevance: '❸ 질서 설계에서 기술의 방향 자체를 바꿔야 한다는 처방을 제시. 아세모글루와 함께 AI가 노동을 보완하는 방향으로 발전해야 하며, 이를 위한 제도적 개입이 필요하다고 주장.',
     color: '#1e40af',
+  },
+  {
+    id: 'kant',
+    fullName: 'Immanuel Kant',
+    koreanName: '이마누엘 칸트',
+    affiliation: 'University of Königsberg (Historical)',
+    title: 'Philosopher',
+    keyWorks: [
+      { title: 'Critique of Pure Reason', year: 1781 },
+      { title: 'Groundwork of the Metaphysics of Morals', year: 1785 },
+      { title: 'Critique of Practical Reason', year: 1788 },
+    ],
+    bio: '독일 쾨니히스베르크대학교 철학 교수(1724~1804). 서양 근대 철학의 핵심 인물이다. 《도덕 형이상학 정초》(1785)에서 정언명법을 제시했다: "인간을 — 자기 자신이든 타인이든 — 결코 단순한 수단으로만 대우하지 말고, 언제나 동시에 목적으로 대우하라." 인간의 존엄(Würde)은 시장 가격(Preis)과 달리 대체할 수 없는 절대적 가치라는 이 원리는, 이후 인권 사상과 헌법 체계의 철학적 토대가 되었다.',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Immanuel_Kant',
+    photoUrl: 'kant.jpg',
+    relevance: '본 연구 제5장 "인간 중심의 가치 전환"의 철학적 기초. AI가 노동을 대체할 때 인간의 가치를 생산성이 아닌 인격 자체에서 찾아야 한다는 논거의 직접적 근거. "인간을 수단이 아닌 목적으로" 원칙은 ❷ 관계 정의에서 인간-AI 관계를 규율하는 핵심 제약이기도 하다.',
+    color: '#4a5568',
   },
   {
     id: 'karatani',
@@ -453,6 +470,21 @@ export const researchers: Researcher[] = [
     photoUrl: 'nussbaum.jpg',
     relevance: '본 연구 전체를 관통하는 핵심 이론가. ❷ 관계 정의에서 "디지털 시민권"의 내용을 정의할 때 10가지 역량 목록을 AI 시대로 확장하는 작업이 필요하며, ❸ 질서 설계에서 분배의 목표를 "소득"이 아닌 "역량 보장"으로 설정하는 근거를 제공한다.',
     color: '#c2410c',
+  },
+  {
+    id: 'oneil',
+    fullName: "Cathy O'Neil",
+    koreanName: '캐시 오닐',
+    affiliation: 'ORCAA (O\'Neil Risk Consulting & Algorithmic Auditing)',
+    title: 'Data Scientist and Author',
+    keyWorks: [
+      { title: 'Weapons of Math Destruction', year: 2016 },
+    ],
+    bio: '하버드대학교 수학 박사, 전 D.E. Shaw 헤지펀드 퀀트 분석가. 월가를 떠난 뒤 알고리즘의 사회적 해악을 고발하는 데이터 과학자로 전환했다. 《수학 무기》(2016)에서 신용평가·채용·보험·치안 등에 쓰이는 알고리즘이 불투명하고, 규모가 크며, 피해자가 이의를 제기할 경로가 없는 "수학 무기(Weapons of Math Destruction)"로 작동한다고 분석했다. 현재 알고리즘 감사 컨설팅 회사 ORCAA를 운영하며 알고리즘 공정성 감사를 실무적으로 수행하고 있다.',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Cathy_O%27Neil',
+    photoUrl: 'oneil.jpg',
+    relevance: '❷ 관계 정의에서 "알고리즘 권력의 규율"의 핵심 이론가. 알고리즘이 불투명하고 규모가 크며 이의 제기 경로가 없는 의사결정 시스템으로 작동한다는 분석은, 투명성 의무·설명가능성·감사 체계 설계의 직접적 근거.',
+    color: '#d97706',
   },
   {
     id: 'oliver',

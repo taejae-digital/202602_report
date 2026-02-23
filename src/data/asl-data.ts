@@ -35,7 +35,7 @@ export const aslLevels: ASLLevel[] = [
   {
     level: 'ASL-4',
     title: '고도 위험 (연구 단계)',
-    capability: '국가 안보 수준의 사이버/생물 위협, 자율 복제·종료 방지 가능, 독립적 AI 연구 수행.',
+    capability: '국가 안보 수준의 사이버/생물 위협, 스스로 복제할 수 있는 능력과 자신의 종료를 회피할 수 있는 능력, 독립적 AI 연구 수행.',
     safeguards: '기계적 해석 가능성, AI 통제(허니팟), 인센티브 분석 — 세 가지 안전 사례 초안 연구 중.',
     bslAnalogy: 'BSL-4: 치사율 높고 치료법 없는 병원체(에볼라) → 완전 격리, 양압 방호복',
     status: '미정의',

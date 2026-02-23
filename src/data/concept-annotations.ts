@@ -178,7 +178,7 @@ export const conceptAnnotations: ConceptAnnotation[] = [
     afterSection: 'sec-5-1',
     term: '칸트의 인간 존엄',
     content:
-      '이마누엘 칸트(Immanuel Kant, 1724-1804)는 《도덕 형이상학 정초》(1785)에서 정언명법(categorical imperative)의 두 번째 정식을 제시했다: "인간을 — 자기 자신이든 타인이든 — 결코 단순한 수단으로만 대우하지 말고, 언제나 동시에 목적으로 대우하라." 인간의 존엄(Würde)은 시장 가격(Preis)과 달리 대체할 수 없는 절대적 가치다. 보고서가 "노동 중심에서 생명 중심으로"의 가치 전환을 말할 때, 칸트의 이 원리가 철학적 기초다 — 인간의 가치는 생산성이 아니라 인격 자체에 있다.',
+      '이마누엘 칸트(Immanuel Kant, 1724-1804)는 《도덕 형이상학 정초》(1785)에서 정언명법(categorical imperative)의 두 번째 정식을 제시했다: "인간을 — 자기 자신이든 타인이든 — 결코 단순한 수단으로만 대우하지 말고, 언제나 동시에 목적으로 대우하라." 인간의 존엄(Würde)은 시장 가격(Preis)과 달리 대체할 수 없는 절대적 가치다. 보고서가 "노동 중심에서 인간 중심으로"의 가치 전환을 말할 때, 칸트의 이 원리가 철학적 기초다 — 인간의 가치는 생산성이 아니라 인격 자체에 있다.',
     source: 'https://en.wikipedia.org/wiki/Categorical_imperative',
   },
   {
