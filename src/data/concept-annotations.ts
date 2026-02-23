@@ -11,7 +11,7 @@ export const conceptAnnotations: ConceptAnnotation[] = [
     afterSection: 'sec-1-1',
     term: '페레즈의 기술 혁명 주기론',
     content:
-      '카를로타 페레즈(Carlota Perez)는 베네수엘라 출신 경제학자로, 1770년대 이후 다섯 차례의 기술 혁명 — (1) 산업혁명, (2) 증기·철도, (3) 철강·전기, (4) 석유·자동차, (5) 정보·통신 — 이 모두 동일한 4단계 주기를 따른다고 분석했다: 폭발(irruption) → 광란(frenzy) → 전환점(turning point) → 황금기(golden age). 전환점에서 제도 재편이 이루어지면 황금기에 도달하고, 실패하면 위기가 장기화된다. 2002년 저서 《Technological Revolutions and Financial Capital》에서 체계화했다.',
+      '카를로타 페레즈(Carlota Perez)는 베네수엘라 출신 경제학자로, 1770년대 이후 다섯 차례의 기술 혁명을 분석하여 기술-제도 공진화의 반복 패턴을 발견했다. 원래 모델은 두 국면, 네 단계로 구성된다.\n\n설치국면(Installation Period): ① 폭발(Irruption) — 새 기술이 등장하고 혁신가들이 옛 산업을 파괴하기 시작한다. ② 광란(Frenzy) — 투기 자본이 몰리고 양극화가 심화되며 거품이 형성된다.\n\n전환점(Turning Point): 거품 붕괴를 계기로 제도적 재편이 시작되는 국면. 이것 자체가 하나의 단계다.\n\n배치국면(Deployment Period): ③ 시너지(Synergy) — 기술과 제도가 맞물려 광범위한 번영이 확산된다. 페레즈 자신이 이 국면을 "황금기(Golden Age)"라 부른다. ④ 성숙(Maturity) — 기술 잠재력이 소진되며 다음 혁명이 잉태된다.\n\n본 보고서에서는 "폭발 → 광란 → 전환점 → 황금기"의 4단계로 단순화했다. 보고서의 핵심 논점이 "전환점에서의 제도적 선택"이므로 설치국면(폭발+광란)과 배치국면(시너지=황금기)의 대비에 집중하고, 성숙 단계는 다음 혁명의 잉태기로서 현재 AI 시대 논의에 직접 해당하지 않아 생략했다. 2002년 저서 《Technological Revolutions and Financial Capital》에서 체계화.',
     source: 'https://en.wikipedia.org/wiki/Technological_Revolutions_and_Financial_Capital',
   },
 

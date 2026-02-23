@@ -1,9 +1,7 @@
 import { reportSections, reportSummary } from '../data/report-sections'
 import { realWorldExamples, type RealWorldExample } from '../data/realworld-examples'
-import { conceptAnnotations, type ConceptAnnotation } from '../data/concept-annotations'
 import { LinkedText } from './LinkedText'
 import { RealWorldBox } from './RealWorldBox'
-import { ConceptBox } from './ConceptBox'
 import { SpeakerDialogueGrid } from './SpeakerDialogueGrid'
 
 const SECTION_LABELS = [
@@ -29,13 +27,6 @@ realWorldExamples.forEach(e => {
   const list = exampleMap.get(e.afterSection) || []
   list.push(e)
   exampleMap.set(e.afterSection, list)
-})
-
-const conceptMap = new Map<string, ConceptAnnotation[]>()
-conceptAnnotations.forEach(c => {
-  const list = conceptMap.get(c.afterSection) || []
-  list.push(c)
-  conceptMap.set(c.afterSection, list)
 })
 
 export function ReportView() {
@@ -67,7 +58,6 @@ export function ReportView() {
 
             {section.subsections.map(sub => {
               const subExamples = exampleMap.get(sub.id) || []
-              const subConcepts = conceptMap.get(sub.id) || []
               return (
                 <div key={sub.id} style={{ marginBottom: 24 }}>
                   <h4 style={{
@@ -107,11 +97,6 @@ export function ReportView() {
                       </p>
                     )
                   })}
-                  {subConcepts.map((c, i) => (
-                    <ConceptBox key={`concept-${i}`} term={c.term} source={c.source}>
-                      {c.content}
-                    </ConceptBox>
-                  ))}
                   {subExamples.map((ex, i) => (
                     <RealWorldBox key={i} title={ex.title} url={ex.url}>
                       {ex.content}
@@ -121,11 +106,6 @@ export function ReportView() {
               )
             })}
 
-            {(conceptMap.get(section.id) || []).map((c, i) => (
-              <ConceptBox key={`section-concept-${i}`} term={c.term} source={c.source}>
-                {c.content}
-              </ConceptBox>
-            ))}
             {sectionExamples.map((ex, i) => (
               <RealWorldBox key={i} title={ex.title} url={ex.url}>
                 {ex.content}

@@ -97,6 +97,12 @@ export function SummaryTable() {
       </div>
       <div className="summary-table-scroll">
         <table className="summary-table" ref={tableRef}>
+          <colgroup>
+            <col style={{ width: '11%' }} />
+            <col style={{ width: '30%' }} />
+            <col style={{ width: '30%' }} />
+            <col style={{ width: '29%' }} />
+          </colgroup>
           <thead>
             <tr>
               {summaryHeaders.map((h, i) => (

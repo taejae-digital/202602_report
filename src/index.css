@@ -168,8 +168,6 @@ body {
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--color-primary);
 }
 
 .section-subtitle {
@@ -781,6 +779,28 @@ body {
 .copy-table-btn:hover {
   background: #e2e8f0;
   color: #1e293b;
+}
+
+/* Concept inline link (underlined keyword in text) */
+.concept-link {
+  color: #0891b2;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dotted #0891b2;
+  font-weight: 500;
+  transition: all 0.15s;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.concept-link:hover {
+  color: #0e7490;
+  border-bottom-color: #0e7490;
 }
 
 /* Scrollbar */
