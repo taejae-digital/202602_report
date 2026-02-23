@@ -18,8 +18,12 @@ export type SectionId = 'framework' | 'report' | 'scenarios' | 'agent-era' | 'st
 
 export type AppView = 'report' | 'the_synergy_book'
 
+const DEFAULT_VIEW: AppView = (import.meta.env.VITE_DEFAULT_VIEW as AppView) || 'report'
+
 function getHashView(): AppView {
-  return window.location.hash === '#the_synergy_book' ? 'the_synergy_book' : 'report'
+  if (window.location.hash === '#the_synergy_book') return 'the_synergy_book'
+  if (window.location.hash === '#report' || window.location.hash === '#') return 'report'
+  return DEFAULT_VIEW
 }
 
 function useHashView(): AppView {
